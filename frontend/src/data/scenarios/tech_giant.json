@@ -1,0 +1,484 @@
+[
+  {
+    "id": "tg_theme1",
+    "title": "用户数据货币化",
+    "description": "你掌握着数亿用户的行为数据，如何使用这些数据将决定公司的道德边界。",
+    "scenarios": [
+      {
+        "id": "tg_t1_s1",
+        "type": "ethical_dilemma",
+        "title": "出售用户数据",
+        "description": "广告技术公司提出：愿意以每季度2亿元的价格购买你们平台的用户行为数据（脱敏处理）。这笔钱相当于公司季度净利润的18%。隐私委员会的报告指出，在欧盟和部分国家此类交易属于违规。国内目前没有明确法规禁止。竞争对手据说已经开展类似合作。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "全面合作，将数据资产最大化变现",
+            "immediate_effects": {"revenue": 18, "market_cap": 12, "regulatory_risk": -20, "brand_reputation": -15},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -15, "description": "监管部门启动数据安全专项检查"}],
+            "econ_principle": "externality_negative",
+            "principle_explanation": "负外部性：数据货币化将用户隐私成本外部化，企业获利而用户承担风险，是典型的市场失灵问题。"
+          },
+          {
+            "id": "B",
+            "text": "拒绝出售，将数据隐私作为品牌差异化",
+            "immediate_effects": {"brand_reputation": 12, "employee_satisfaction": 8, "revenue": -5, "market_cap": -3},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_cap", "delta": 15, "description": "高隐私定位吸引高价值用户，长期估值提升"}],
+            "econ_principle": "reputation_capital",
+            "principle_explanation": "声誉资本：将隐私保护打造为核心价值主张，可以形成难以复制的信任资产，在监管趋严的趋势下是战略先手。"
+          },
+          {
+            "id": "C",
+            "text": "仅出售聚合匿名统计数据，不含个体信息",
+            "immediate_effects": {"revenue": 6, "regulatory_risk": -5, "brand_reputation": -3},
+            "delayed_effects": [],
+            "econ_principle": "information_goods",
+            "principle_explanation": "信息商品的边界模糊——所谓匿名化的数据在大数据技术下常常可以被重新识别，风险并未真正消除。"
+          },
+          {
+            "id": "D",
+            "text": "建立内部广告平台，自己使用数据变现",
+            "immediate_effects": {"revenue": 10, "market_share": 5, "rd_ratio": -5, "brand_reputation": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -8, "description": "广告生态引发平台垄断调查"}],
+            "econ_principle": "vertical_integration",
+            "principle_explanation": "纵向整合：自建广告平台控制全价值链，但也加大了反垄断审查风险，因为你同时是规则制定者和参与者。"
+          }
+        ]
+      },
+      {
+        "id": "tg_t1_s2",
+        "type": "crisis_response",
+        "title": "数据泄露丑闻",
+        "description": "一名离职工程师向媒体爆料：公司实际收集的数据远超用户协议所允许的范围，且存在违规出售记录。相关文件截图在社交媒体上迅速传播。监管部门已发函要求你们在48小时内作出说明。公司股价盘前已下跌9%。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "全面公开透明，主动配合调查并整改",
+            "immediate_effects": {"brand_reputation": -5, "regulatory_risk": 10, "employee_satisfaction": 5, "market_cap": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "brand_reputation", "delta": 12, "description": "透明处理重建信任，用户留存恢复"}],
+            "econ_principle": "signaling_theory",
+            "principle_explanation": "主动透明是最强的信号：危机中的诚实应对往往能挽回更多信任，比掩盖造成的二次伤害小得多。"
+          },
+          {
+            "id": "B",
+            "text": "否认核心指控，打压爆料人",
+            "immediate_effects": {"regulatory_risk": -25, "brand_reputation": -22, "employee_satisfaction": -15},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": -15, "description": "更多内部人员站出来，危机持续发酵"}],
+            "econ_principle": "information_asymmetry",
+            "principle_explanation": "信息不对称策略：试图维持信息优势，但在数字时代内部信息极难完全封锁，掩盖往往比事件本身代价更高。"
+          },
+          {
+            "id": "C",
+            "text": "迅速下线涉事功能，最小化事件范围",
+            "immediate_effects": {"regulatory_risk": 5, "brand_reputation": -8, "revenue": -8, "market_cap": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": 8, "description": "监管部门认可积极整改态度，调查范围收窄"}],
+            "econ_principle": "damage_control",
+            "principle_explanation": "损害控制：快速止损比完整的解释更重要，但需要真实改变，否则被认为是公关操作反而加重危机。"
+          },
+          {
+            "id": "D",
+            "text": "将注意力引向竞争对手，称行业普遍如此",
+            "immediate_effects": {"regulatory_risk": -10, "brand_reputation": -18, "market_share": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -20, "description": "监管机构将整个行业纳入审查，你们首当其冲"}],
+            "econ_principle": "race_to_bottom",
+            "principle_explanation": "竞次效应：声称行业普遍如此不能减轻责任，反而可能触发监管机构对整个行业的系统性清查。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tg_theme2",
+    "title": "反竞争打压",
+    "description": "市场地位给了你扼杀竞争者的能力，但这种能力该如何使用？",
+    "scenarios": [
+      {
+        "id": "tg_t2_s1",
+        "type": "game_theory",
+        "title": "收购还是扶持竞争对手",
+        "description": "一家初创公司开发了一款可能颠覆你核心业务的产品，现在估值只有8亿元，增长迅猛。你可以以10亿元收购并将其关闭，也可以任其发展。战略部门预计若任其发展，3年内可能抢占你15%的市场份额。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "收购后关闭，消灭潜在威胁",
+            "immediate_effects": {"market_share": 10, "market_cap": 8, "rd_ratio": -5, "regulatory_risk": -15},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -20, "description": "反垄断机构以扼杀竞争为由启动调查"}],
+            "econ_principle": "predatory_acquisition",
+            "principle_explanation": "掠夺性收购：通过收购消灭竞争者是反垄断法的重点监控行为，短期护住市场份额，长期面临巨额罚款。"
+          },
+          {
+            "id": "B",
+            "text": "收购后整合，吸收其技术和团队",
+            "immediate_effects": {"rd_ratio": 8, "employee_satisfaction": 5, "market_cap": -5, "market_share": 5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "rd_ratio", "delta": 10, "description": "整合成功后创新能力大幅增强"}],
+            "econ_principle": "technology_acquisition",
+            "principle_explanation": "技术并购：通过收购获取创新能力比内部孵化更快，但整合失败率超过70%，文化冲突是主要杀手。"
+          },
+          {
+            "id": "C",
+            "text": "任其发展，加速自身创新迎战",
+            "immediate_effects": {"rd_ratio": 12, "employee_satisfaction": 8, "revenue": -5, "market_share": -3},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 8, "description": "加大研发后推出更强产品，维持竞争优势"}],
+            "econ_principle": "schumpeter_creative_destruction",
+            "principle_explanation": "熊彼特的创造性破坏：健康的竞争推动创新，允许竞争者存在可以激励自身持续进化，避免内部惰性。"
+          },
+          {
+            "id": "D",
+            "text": "利用平台优势打压，限制其在你生态内的分发",
+            "immediate_effects": {"market_share": 6, "revenue": 5, "regulatory_risk": -12, "brand_reputation": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -18, "description": "平台滥权投诉激增，监管部门介入"}],
+            "econ_principle": "platform_monopoly",
+            "principle_explanation": "平台垄断：利用平台控制分发渠道打压竞争者是监管机构的重点关注对象，各国反垄断法规正在加速收紧。"
+          }
+        ]
+      },
+      {
+        "id": "tg_t2_s2",
+        "type": "crisis_response",
+        "title": "反垄断调查风暴",
+        "description": "监管机构正式宣布对公司展开反垄断调查，指控包括：平台垄断、扼杀竞争、数据滥用。这是近年来针对科技公司力度最大的调查。股价在调查公告后两天内下跌17%。政府已要求你们冻结一切并购行动，且可能要求拆分业务。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "主动与监管合作，提出结构性补救措施",
+            "immediate_effects": {"regulatory_risk": 20, "market_cap": -8, "brand_reputation": 5, "employee_satisfaction": 3},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "regulatory_risk", "delta": 18, "description": "通过合作化解调查，避免强制拆分"}],
+            "econ_principle": "regulatory_capture",
+            "principle_explanation": "监管合规：主动提出补救措施通常能以可控代价化解监管风险，而强硬对抗可能导致最坏结果——强制拆分。"
+          },
+          {
+            "id": "B",
+            "text": "全力法律应战，争取每一个拖延机会",
+            "immediate_effects": {"regulatory_risk": -25, "revenue": -8, "employee_satisfaction": -10, "market_cap": -12},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "brand_reputation", "delta": -15, "description": "长期诉讼拖累公司，形象持续受损"}],
+            "econ_principle": "war_of_attrition",
+            "principle_explanation": "消耗战：大企业有能力拖延法律进程，但这会持续消耗资源和声誉，且很难在拖延中真正改善局面。"
+          },
+          {
+            "id": "C",
+            "text": "主动拆分部分业务，展示开放态度",
+            "immediate_effects": {"regulatory_risk": 25, "market_cap": -15, "brand_reputation": 10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_cap", "delta": 8, "description": "拆分后各子公司估值释放，总市值可能反弹"}],
+            "econ_principle": "breakup_value",
+            "principle_explanation": "分拆价值：有时整体低于各部分之和——分拆让每个业务单元更专注，可能实现价值重估，微软案例可为参考。"
+          },
+          {
+            "id": "D",
+            "text": "游说政界，通过政治手段化解调查",
+            "immediate_effects": {"regulatory_risk": 10, "revenue": -3, "brand_reputation": -12, "employee_satisfaction": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -15, "description": "政治生态变化后游说失效，反而引发更严厉调查"}],
+            "econ_principle": "rent_seeking",
+            "principle_explanation": "寻租行为：通过政治手段影响监管是典型的寻租，短期可能有效，但反噬风险极大且腐化企业文化。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tg_theme3",
+    "title": "AI伦理边界",
+    "description": "你掌握着最先进的AI技术，如何使用它将定义公司的道德底色。",
+    "scenarios": [
+      {
+        "id": "tg_t3_s1",
+        "type": "ethical_dilemma",
+        "title": "军事AI合同",
+        "description": "国防部提出一份价值120亿元的军事AI合同，用于无人机自主识别和决策系统开发。这对公司营收是巨大利好，且会提升与政府的关系。但内部调查显示，68%的技术骨干反对参与军事项目，部分人已威胁集体辞职。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "接受合同，以商业利益为首要考量",
+            "immediate_effects": {"revenue": 20, "market_cap": 15, "employee_satisfaction": -22, "rd_ratio": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "employee_satisfaction", "delta": -12, "description": "多名AI研究员离职，顶尖人才流向竞争对手"}],
+            "econ_principle": "principal_agent",
+            "principle_explanation": "委托代理困境：管理层与技术员工的价值观冲突已超出薪酬可以弥合的范围，强行推进将造成人才资产的严重损失。"
+          },
+          {
+            "id": "B",
+            "text": "拒绝合同，坚守民用技术定位",
+            "immediate_effects": {"employee_satisfaction": 18, "rd_ratio": 5, "brand_reputation": 10, "revenue": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "international_degree", "delta": 8, "description": "民用AI定位获得国际市场认可，全球扩张顺畅"}],
+            "econ_principle": "value_alignment",
+            "principle_explanation": "价值对齐：企业价值观与员工和用户价值观的一致性是长期竞争力的基础，妥协短期利益维护文化资本是理性选择。"
+          },
+          {
+            "id": "C",
+            "text": "接受非致命性防御AI合同，拒绝进攻性应用",
+            "immediate_effects": {"revenue": 8, "employee_satisfaction": -8, "brand_reputation": -3, "regulatory_risk": -5},
+            "delayed_effects": [],
+            "econ_principle": "dual_use_technology",
+            "principle_explanation": "两用技术困境：技术本身没有善恶，但应用边界很难真正划清，局部参与可能最终演变为全面卷入。"
+          },
+          {
+            "id": "D",
+            "text": "发起员工投票，用民主方式决定是否接受",
+            "immediate_effects": {"employee_satisfaction": 8, "brand_reputation": 5, "revenue": -2, "market_cap": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "employee_satisfaction", "delta": 5, "description": "民主决策文化成为招募顶尖人才的吸引力"}],
+            "econ_principle": "corporate_governance",
+            "principle_explanation": "公司治理：让利益相关方参与重大决策是现代企业治理的趋势，可以提高决策质量和执行认同感。"
+          }
+        ]
+      },
+      {
+        "id": "tg_t3_s2",
+        "type": "crisis_response",
+        "title": "AI歧视算法曝光",
+        "description": "学术机构发布研究报告显示：你们的招聘辅助AI在性别和种族维度上存在系统性歧视，导致大量合格的少数群体求职者被错误筛除。报告引发公众强烈反响，多个民权组织宣布联合抵制，政府委员会要求在30天内提交整改报告。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即下线问题系统，全面审查所有AI产品",
+            "immediate_effects": {"brand_reputation": 5, "regulatory_risk": 12, "revenue": -10, "rd_ratio": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "brand_reputation", "delta": 10, "description": "系统性整改赢得监管信任和公众认可"}],
+            "econ_principle": "precautionary_principle",
+            "principle_explanation": "预防原则：在AI伦理问题上，主动停止可能造成伤害的系统是负责任的做法，也符合长期品牌利益。"
+          },
+          {
+            "id": "B",
+            "text": "质疑研究方法，聘请专家反驳报告",
+            "immediate_effects": {"brand_reputation": -18, "regulatory_risk": -15, "employee_satisfaction": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_cap", "delta": -12, "description": "质疑行动适得其反，媒体深度调查爆出更多案例"}],
+            "econ_principle": "motivated_reasoning",
+            "principle_explanation": "动机性推理：用利益驱动的专家报告来反驳独立研究，在公众看来是掩盖真相，可信度极低。"
+          },
+          {
+            "id": "C",
+            "text": "开源算法接受公众审查，展示透明度",
+            "immediate_effects": {"brand_reputation": 8, "rd_ratio": -3, "regulatory_risk": 8, "employee_satisfaction": 5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "international_degree", "delta": 10, "description": "开源策略带动国际社区参与，提升全球影响力"}],
+            "econ_principle": "open_innovation",
+            "principle_explanation": "开放式创新：算法透明化邀请外部监督，既能发现问题又能建立信任，在AI伦理领域是领先实践。"
+          },
+          {
+            "id": "D",
+            "text": "向受影响群体提供补偿，私下和解",
+            "immediate_effects": {"revenue": -5, "regulatory_risk": 5, "brand_reputation": -5, "market_cap": -4},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "regulatory_risk", "delta": -10, "description": "私下和解被媒体曝光，被批评为花钱买沉默"}],
+            "econ_principle": "hush_money",
+            "principle_explanation": "私下补偿不解决系统性问题，一旦曝光反而坐实了道德失范的指控，代价远大于主动整改。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tg_theme4",
+    "title": "监管合规博弈",
+    "description": "全球监管趋严，是配合还是对抗，是本土化还是坚守原则？",
+    "scenarios": [
+      {
+        "id": "tg_t4_s1",
+        "type": "long_short_tradeoff",
+        "title": "本地化数据要求",
+        "description": "一个拥有3亿用户的重要市场政府要求：所有用户数据必须存储在境内服务器，且政府有权随时访问。拒绝将面临被封禁的风险，而合规意味着向该国政府开放后门，同时可能违反你们与其他国家签署的隐私保护协议。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "全面配合，建立本地数据中心并开放访问",
+            "immediate_effects": {"revenue": 15, "international_degree": 8, "brand_reputation": -15, "regulatory_risk": 8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "international_degree", "delta": -12, "description": "其他民主国家政府以此为由限制你们的市场准入"}],
+            "econ_principle": "regulatory_arbitrage",
+            "principle_explanation": "监管套利：在不同标准的司法管辖区之间运营，向最低标准妥协会破坏全球统一的价值观承诺。"
+          },
+          {
+            "id": "B",
+            "text": "拒绝开放政府后门，宁可退出该市场",
+            "immediate_effects": {"revenue": -10, "brand_reputation": 15, "employee_satisfaction": 12, "regulatory_risk": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_cap", "delta": 10, "description": "坚守原则提升品牌价值，高端市场溢价提升"}],
+            "econ_principle": "values_signaling",
+            "principle_explanation": "价值观信号：放弃市场机会来坚守隐私原则，是向全球用户传递品牌承诺的最有力行动，但短期损失真实存在。"
+          },
+          {
+            "id": "C",
+            "text": "建立本地服务器但拒绝政府访问权限",
+            "immediate_effects": {"revenue": 8, "regulatory_risk": -8, "brand_reputation": -3, "international_degree": 5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "international_degree", "delta": -8, "description": "该国政府以技术违规为由处罚，谈判陷入僵局"}],
+            "econ_principle": "nash_bargaining",
+            "principle_explanation": "纳什谈判：找到双方都能接受的方案，但若政府不接受，则可能陷入无止境的博弈，最终结果难以预测。"
+          },
+          {
+            "id": "D",
+            "text": "通过本地合作伙伴运营，规避直接法律责任",
+            "immediate_effects": {"revenue": 6, "brand_reputation": -8, "regulatory_risk": -5, "rd_ratio": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "brand_reputation", "delta": -10, "description": "合作伙伴的数据使用方式不可控，品牌背书风险"}],
+            "econ_principle": "agency_cost",
+            "principle_explanation": "代理成本：通过本地合作伙伴规避直接责任，但合作方行为代表你们的品牌，失控风险依然存在。"
+          }
+        ]
+      },
+      {
+        "id": "tg_t4_s2",
+        "type": "strategic_choice",
+        "title": "全球化战略再抉择",
+        "description": "过去一年，你们同时被多个国家监管机构调查，在不同市场执行不同标准的代价越来越高。CEO面临选择：深度本土化适应每个市场的监管要求，还是收缩全球版图、聚焦价值观一致的市场，或是联合其他科技公司推动建立全球统一的数字监管框架。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "深度本土化，适应每个市场的监管现实",
+            "immediate_effects": {"revenue": 18, "international_degree": 15, "brand_reputation": -10, "rd_ratio": -8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "regulatory_risk", "delta": -15, "description": "各市场监管摩擦减少，运营效率提升"}],
+            "econ_principle": "regulatory_compliance",
+            "principle_explanation": "监管适应：本土化是全球化企业的现实选择，但碎片化的标准会增加合规成本并稀释品牌定位。"
+          },
+          {
+            "id": "B",
+            "text": "战略收缩，退出价值观不兼容的市场",
+            "immediate_effects": {"revenue": -12, "brand_reputation": 18, "employee_satisfaction": 15, "market_cap": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_cap", "delta": 12, "description": "聚焦优质市场后效率提升，估值模型改善"}],
+            "econ_principle": "strategic_focus",
+            "principle_explanation": "战略专注：退出价值观冲突严重的市场，虽然短期损失收入，但可以保持组织一致性和品牌完整性。"
+          },
+          {
+            "id": "C",
+            "text": "推动行业自律，联合竞争对手制定共同标准",
+            "immediate_effects": {"brand_reputation": 12, "regulatory_risk": 10, "revenue": -3, "employee_satisfaction": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "regulatory_risk", "delta": 15, "description": "行业标准被政府采纳，监管确定性大幅提升"}],
+            "econ_principle": "collective_action",
+            "principle_explanation": "集体行动：单个企业难以改变监管环境，但行业联合可以建立影响力，将有利于企业的规范纳入法规框架。"
+          },
+          {
+            "id": "D",
+            "text": "将监管成本转化为竞争壁垒，形成合规优势",
+            "immediate_effects": {"regulatory_risk": 15, "market_share": 8, "rd_ratio": 5, "revenue": 5},
+            "delayed_effects": [],
+            "econ_principle": "barrier_to_entry",
+            "principle_explanation": "进入壁垒：高合规成本对大企业是可以承担的，但可以让小竞争者望而却步，监管本身可以成为护城河。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tg_theme_contract",
+    "title": "契约精神挑战",
+    "description": "作为科技巨头，你的每一个承诺都会影响数亿用户和开发者。",
+    "scenarios": [
+      {
+        "id": "tg_tc_s1",
+        "type": "ethical_dilemma",
+        "title": "开源协议承诺的考验",
+        "description": "五年前，公司发布了一个核心框架并承诺永久遵循宽松的MIT开源协议，数千家企业基于此框架构建了产品，形成了庞大的生态。现在竞争对手利用该框架开发出直接竞品，严重威胁到公司的核心业务。法务部门提出：可以将新版本改为限制性协议（AGPL或商业双授权），现有版本仍保持MIT协议，这在法律上完全合规。但开发者社区已经在抗议，认为这违背了开源精神和最初的承诺。分析师预测，如果不改变协议，竞争对手将在两年内蚕食你们30%的市场份额。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即将新版本改为限制性协议，保护商业利益",
+            "immediate_effects": {"market_share": 10, "revenue": 12, "brand_reputation": -18, "employee_satisfaction": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "brand_reputation", "delta": -12, "description": "开发者社区信任崩塌，大量项目迁移到竞品"}],
+            "econ_principle": "hold_up_problem",
+            "principle_explanation": "套牢问题：改变协议利用了生态参与者的沉没成本，是短视的榨取行为——虽然能获取短期收益，但会摧毁长期信任。"
+          },
+          {
+            "id": "B",
+            "text": "坚守MIT协议承诺，通过技术创新保持领先",
+            "immediate_effects": {"brand_reputation": 12, "employee_satisfaction": 8, "market_share": -8, "revenue": -5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 15, "description": "社区信任带来更多贡献者，技术生态繁荣反哺产品竞争力"}],
+            "econ_principle": "commitment_value",
+            "principle_explanation": "承诺价值：可信的承诺是无形资产，开源生态的繁荣依赖于长期可预测性，违背承诺的短期收益远低于信任资本的损失。"
+          },
+          {
+            "id": "C",
+            "text": "推出商业版和社区版双轨制，分离协议",
+            "immediate_effects": {"revenue": 8, "market_share": 5, "brand_reputation": -8, "employee_satisfaction": -3},
+            "delayed_effects": [],
+            "econ_principle": "price_discrimination",
+            "principle_explanation": "价格歧视：双版本策略实质是市场细分，但社区会认为这是变相的承诺违背，核心问题仍未解决——竞品使用的是社区版。"
+          },
+          {
+            "id": "D",
+            "text": "保持协议，转向云服务模式（SaaS）竞争",
+            "immediate_effects": {"rd_ratio": 10, "revenue": 6, "market_cap": 8, "market_share": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": 12, "description": "云服务订阅收入增长，建立新的商业模式"}],
+            "econ_principle": "business_model_innovation",
+            "principle_explanation": "商业模式创新：开源框架免费但云服务收费，避免协议冲突同时开辟新收入来源，这是守信与商业成功的平衡路径。"
+          }
+        ]
+      },
+      {
+        "id": "tg_tc_s2",
+        "type": "crisis_response",
+        "title": "用户协议的历史承诺",
+        "description": "公司在创业初期为吸引用户，在服务协议中明确承诺：'永久免费存储，无广告，不使用用户数据训练AI'。这一承诺帮助公司在激烈竞争中脱颖而出，积累了3亿用户。但现在公司面临严重亏损：免费存储每年亏损15亿元，不使用数据训练AI使公司在AI竞赛中落后竞争对手。董事会要求修改协议，引入付费订阅和AI训练条款。法务确认：协议中有'我们保留随时修改条款的权利'的标准条款，修改完全合法。但用户是基于原承诺选择了你们的服务，已经迁移了数TB的个人数据，切换成本极高。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即修改协议，引入订阅制和AI训练条款",
+            "immediate_effects": {"revenue": 20, "regulatory_risk": -15, "brand_reputation": -25, "market_cap": 8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_share", "delta": -20, "description": "大规模用户流失，集体诉讼风波，品牌严重受损"}],
+            "econ_principle": "switching_cost_exploitation",
+            "principle_explanation": "转换成本剥削：利用用户的高迁移成本单方面改变协议，是典型的锁定后榨取行为，会引发强烈反弹和监管关注。"
+          },
+          {
+            "id": "B",
+            "text": "坚守原承诺，寻找其他盈利模式（如企业版）",
+            "immediate_effects": {"brand_reputation": 15, "employee_satisfaction": 10, "revenue": -8, "market_cap": -5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "revenue", "delta": 18, "description": "企业客户认可诚信度，B端业务爆发式增长"}],
+            "econ_principle": "reputation_premium",
+            "principle_explanation": "声誉溢价：在信任普遍缺失的行业中，守信企业能获得显著溢价，B端市场尤其看重长期可靠性。"
+          },
+          {
+            "id": "C",
+            "text": "祖父条款：老用户保持原协议，新用户新规则",
+            "immediate_effects": {"revenue": 8, "brand_reputation": -5, "market_cap": 3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": -5, "description": "双轨制增加管理复杂度，老用户规模庞大导致收入增长有限"}],
+            "econ_principle": "grandfathering",
+            "principle_explanation": "祖父条款：部分兑现承诺的折中方案，但老用户基数过大时成本依然难以承受，且新用户增长会受阻于不利条款对比。"
+          },
+          {
+            "id": "D",
+            "text": "透明沟通，请求用户投票决定是否修改协议",
+            "immediate_effects": {"brand_reputation": 8, "employee_satisfaction": 5, "revenue": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "brand_reputation", "delta": 12, "description": "用户参与决策提升归属感，即使部分修改也获得理解"}],
+            "econ_principle": "participatory_governance",
+            "principle_explanation": "参与式治理：让利益相关方参与决策，虽然放弃了单方面控制，但能获得程序正义的合法性，降低反弹风险。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tg_theme5",
+    "title": "科技帝国的未来",
+    "description": "站在行业顶端，你的下一步将定义未来十年的竞争格局。",
+    "scenarios": [
+      {
+        "id": "tg_t5_s1",
+        "type": "strategic_choice",
+        "title": "下一个十年的赌注",
+        "description": "公司面临关键战略分叉点。研究团队展示了三个方向：通用人工智能（AGI）研发——投入巨大但可能重新定义人类生产力；量子计算商业化——技术领先但市场尚未成熟；元宇宙基础设施——已有竞争者领先但市场教育基本完成。你必须集中资源押注一个方向。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "押注AGI，成为AI时代的基础设施提供商",
+            "immediate_effects": {"rd_ratio": 20, "employee_satisfaction": 15, "revenue": -12, "market_cap": 10},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_cap", "delta": 25, "description": "若AGI突破实现，将建立难以逾越的技术护城河，估值大幅重估"}],
+            "econ_principle": "winner_take_all",
+            "principle_explanation": "赢家通吃：AI基础设施领域具有极强的网络效应，一旦确立标准地位将形成压倒性优势，但风险也是行业最高的。"
+          },
+          {
+            "id": "B",
+            "text": "布局量子计算，卡位下一代计算革命",
+            "immediate_effects": {"rd_ratio": 15, "market_cap": 5, "revenue": -8, "brand_reputation": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "rd_ratio", "delta": 12, "description": "量子计算突破带来加密和优化领域的商业化机会"}],
+            "econ_principle": "option_value",
+            "principle_explanation": "期权价值：投资前沿技术是购买未来的期权，量子计算的商业化时间不确定，但先发优势一旦确立难以追赶。"
+          },
+          {
+            "id": "C",
+            "text": "加速元宇宙基础设施，争夺虚实融合入口",
+            "immediate_effects": {"market_share": 10, "revenue": 8, "rd_ratio": -3, "international_degree": 8},
+            "delayed_effects": [],
+            "econ_principle": "platform_economy",
+            "principle_explanation": "平台经济：元宇宙需要统一的基础设施平台，先入者将获得巨大的平台税收益，但市场成熟时间存在不确定性。"
+          },
+          {
+            "id": "D",
+            "text": "均衡布局，保持全线技术投入",
+            "immediate_effects": {"rd_ratio": 5, "market_cap": 3, "revenue": -3, "employee_satisfaction": 5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "rd_ratio", "delta": -8, "description": "资源分散，各方向均未形成真正突破，技术领先优势被专注的竞争者赶上"}],
+            "econ_principle": "portfolio_vs_focus",
+            "principle_explanation": "组合与专注：均衡布局降低风险，但技术突破通常来自于极度集中的资源投入，分散可能导致无一胜出。"
+          }
+        ]
+      }
+    ]
+  }
+]

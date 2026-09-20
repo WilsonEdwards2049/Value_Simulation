@@ -1,0 +1,484 @@
+[
+  {
+    "id": "sc_theme1",
+    "title": "加班政策风波",
+    "description": "面对竞争压力，是否用员工的时间换取竞争优势？",
+    "scenarios": [
+      {
+        "id": "sc_t1_s1",
+        "type": "ethical_dilemma",
+        "title": "强制加班令",
+        "description": "竞争对手刚发布新产品，市场压力骤增。财务总监建议推行每周6天、日均10小时的加班制度，短期内可大幅提升产能和研发速度。HR经理却警告说，多名核心员工已经在抱怨工作强度，部分人正在被猎头接触。你面临关键抉择：用加班换速度，还是保护团队？",
+        "choices": [
+          {
+            "id": "A",
+            "text": "强制推行加班制度，以竞争优先",
+            "immediate_effects": {"revenue": 12, "market_share": 8, "employee_satisfaction": -18, "retention_rate": -10, "profit_margin": 5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "retention_rate", "delta": -12, "description": "骨干员工陆续离职，项目出现延误"}],
+            "econ_principle": "marginal_diminishing",
+            "principle_explanation": "短期生产率上升，但边际效益递减——疲惫的员工错误率更高，创新能力下降，长期反而损失更多。"
+          },
+          {
+            "id": "B",
+            "text": "拒绝强制加班，优化工作流程代替",
+            "immediate_effects": {"employee_satisfaction": 10, "retention_rate": 8, "revenue": -5, "market_share": -4},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "revenue", "delta": 8, "description": "流程优化后人效提升，收入回升"}],
+            "econ_principle": "marginal_diminishing",
+            "principle_explanation": "拒绝低效增长，通过系统性优化提升人均产出，是更可持续的竞争力来源。"
+          },
+          {
+            "id": "C",
+            "text": "推行弹性加班并给予加班补贴",
+            "immediate_effects": {"revenue": 6, "employee_satisfaction": -5, "profit_margin": -4, "market_share": 3},
+            "delayed_effects": [],
+            "econ_principle": "utility_theory",
+            "principle_explanation": "货币补偿部分弥补效用损失，但长期而言员工的心理账户仍在计算付出与回报的比例。"
+          },
+          {
+            "id": "D",
+            "text": "外包部分工作，招聘兼职减少内部压力",
+            "immediate_effects": {"profit_margin": -6, "cash_flow": -8, "employee_satisfaction": 5, "market_share": 2},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "customer_satisfaction", "delta": -8, "description": "外包质量不稳定，客户投诉增加"}],
+            "econ_principle": "comparative_advantage",
+            "principle_explanation": "比较优势原理——将非核心业务外包，但品控风险随之上升，需要有效的质量管理机制。"
+          }
+        ]
+      },
+      {
+        "id": "sc_t1_s2",
+        "type": "crisis_response",
+        "title": "加班政策的代价",
+        "description": "三个月过去了，加班政策的影响开始显现。公司技术骨干张工程师和两名产品经理递交了辞呈，他们加入了竞争对手。同时媒体曝光了你们公司的加班文化，招聘网站上出现大量负面评论，最新一轮招聘几乎颗粒无收。现在你必须决定如何应对这场人才危机。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即废除加班制度，公开道歉并承诺整改",
+            "immediate_effects": {"employee_satisfaction": 15, "customer_satisfaction": 8, "retention_rate": 10, "revenue": -6},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "retention_rate", "delta": 8, "description": "口碑改善，招聘回暖，人才流失停止"}],
+            "econ_principle": "signaling_theory",
+            "principle_explanation": "公开认错是强烈的信号传递——向市场和员工表明公司价值观已改变，有助于重建信任资本。"
+          },
+          {
+            "id": "B",
+            "text": "用涨薪和股权留住关键员工，维持现有制度",
+            "immediate_effects": {"profit_margin": -10, "cash_flow": -12, "retention_rate": 8, "employee_satisfaction": 5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": -8, "description": "薪资成本持续侵蚀利润，问题根源未解决"}],
+            "econ_principle": "efficiency_wage",
+            "principle_explanation": "效率工资理论：高薪可以提高留存，但如果根本问题是制度而非薪酬，成本只会越来越高。"
+          },
+          {
+            "id": "C",
+            "text": "缩减团队规模，用精英小团队撑起运营",
+            "immediate_effects": {"profit_margin": 8, "employee_satisfaction": -12, "market_share": -8, "retention_rate": -15},
+            "delayed_effects": [],
+            "econ_principle": "diminishing_returns",
+            "principle_explanation": "裁员短期改善财务指标，但团队缩减超临界点后剩余员工承受更大压力，效率反而可能下降。"
+          },
+          {
+            "id": "D",
+            "text": "主动联系媒体讲述公司正面故事",
+            "immediate_effects": {"customer_satisfaction": 6, "market_share": 3, "employee_satisfaction": -3, "profit_margin": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "employee_satisfaction", "delta": -8, "description": "员工认为公关是表面文章，信任进一步流失"}],
+            "econ_principle": "information_asymmetry",
+            "principle_explanation": "信息不对称：对外包装与内部实情脱节，员工看得最清楚，长期无法用PR掩盖文化问题。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sc_theme2",
+    "title": "产品安全取舍",
+    "description": "在成本压力下，是否以牺牲质量换取更高利润？",
+    "scenarios": [
+      {
+        "id": "sc_t2_s1",
+        "type": "resource_allocation",
+        "title": "降低质检标准",
+        "description": "采购总监提出：如果将原材料供应商从A级换成C级，单品成本可降低22%，利润率将大幅提升。质检部门警告说C级供应商的不合格率是A级的3倍。竞争对手已经这样做了，他们的定价更低、利润更高。你们怎么办？",
+        "choices": [
+          {
+            "id": "A",
+            "text": "全面切换至低成本供应商，激进降价",
+            "immediate_effects": {"profit_margin": 15, "revenue": 10, "market_share": 8, "customer_satisfaction": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "customer_satisfaction", "delta": -15, "description": "产品质量问题显现，退货率和投诉急剧上升"}],
+            "econ_principle": "adverse_selection",
+            "principle_explanation": "逆向选择：在质量信息不透明的市场中，低价策略短期有效，但会吸引价格敏感客户并驱走忠实用户群。"
+          },
+          {
+            "id": "B",
+            "text": "保持原供应商，通过运营优化降本",
+            "immediate_effects": {"profit_margin": 3, "customer_satisfaction": 5, "revenue": -2, "cash_flow": -3},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 5, "description": "口碑积累带来自然增长"}],
+            "econ_principle": "reputation_capital",
+            "principle_explanation": "声誉资本：质量信誉是难以快速积累但极易摧毁的无形资产，对小公司尤为关键。"
+          },
+          {
+            "id": "C",
+            "text": "部分产品线切换，核心产品保持高标准",
+            "immediate_effects": {"profit_margin": 7, "market_share": 4, "customer_satisfaction": -3},
+            "delayed_effects": [],
+            "econ_principle": "market_segmentation",
+            "principle_explanation": "市场细分：差异化产品线可覆盖不同客户，但管理复杂度上升，品牌定位需要清晰区分。"
+          },
+          {
+            "id": "D",
+            "text": "投资研发，通过技术创新实现降本",
+            "immediate_effects": {"cash_flow": -15, "profit_margin": -5, "employee_satisfaction": 5, "market_share": -2},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": 12, "description": "自主技术降本成效显现，成本结构改善"}],
+            "econ_principle": "innovation_rent",
+            "principle_explanation": "创新租金：技术领先带来的成本优势是竞争护城河，比价格战更可持续，但需要耐心度过投资期。"
+          }
+        ]
+      },
+      {
+        "id": "sc_t2_s2",
+        "type": "crisis_response",
+        "title": "产品召回危机",
+        "description": "噩耗传来：一款产品因质量问题导致3名用户受伤，监管部门介入调查，要求48小时内提交质量报告并召回同批次产品。媒体已开始报道，社交平台热度持续攀升。全面召回预计费用高达800万元，相当于公司半年净利润。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即全面召回，主动承担责任",
+            "immediate_effects": {"cash_flow": -25, "profit_margin": -18, "customer_satisfaction": 8, "debt_pressure": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "customer_satisfaction", "delta": 12, "description": "危机公关处理得当，品牌信任度回升"}],
+            "econ_principle": "signaling_theory",
+            "principle_explanation": "危机时刻的行动是最有力的信号——主动担责比被动应付的长期成本低得多，能保存最多的声誉资本。"
+          },
+          {
+            "id": "B",
+            "text": "法律部门介入，争议是否必须召回",
+            "immediate_effects": {"customer_satisfaction": -20, "profit_margin": -5, "debt_pressure": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": -20, "description": "诉讼缠身加监管处罚，损失远超召回成本"}],
+            "econ_principle": "risk_management",
+            "principle_explanation": "风险管理失误：法律博弈的预期成本远高于主动召回，且声誉损失难以用金钱简单计算。"
+          },
+          {
+            "id": "C",
+            "text": "只召回有记录问题的产品，最小化范围",
+            "immediate_effects": {"cash_flow": -10, "profit_margin": -8, "customer_satisfaction": -12},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "customer_satisfaction", "delta": -10, "description": "更多问题陆续曝光，公信力彻底崩溃"}],
+            "econ_principle": "moral_hazard",
+            "principle_explanation": "道德风险：最小化召回范围看似减少损失，实则在拿剩余用户安全豪赌，一旦再出事故代价成倍增加。"
+          },
+          {
+            "id": "D",
+            "text": "紧急融资，以现金解决危机但推迟召回",
+            "immediate_effects": {"cash_flow": -8, "debt_pressure": -20, "customer_satisfaction": -8, "revenue": -8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": -10, "description": "融资利息和还款压力持续侵蚀利润"}],
+            "econ_principle": "liquidity_crisis",
+            "principle_explanation": "流动性危机下的高息融资是双刃剑——解决短期资金缺口，但债务成本会在未来长期拖累经营。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sc_theme3",
+    "title": "现金流危机",
+    "description": "公司账面资金告急，每一个融资决策都将深刻影响未来。",
+    "scenarios": [
+      {
+        "id": "sc_t3_s1",
+        "type": "long_short_tradeoff",
+        "title": "紧急融资抉择",
+        "description": "公司账上只剩45天的运营资金。银行贷款审批需要3个月，民间借贷平台可以3天放款但年化利率高达28%。一家大型竞争对手愿意低估价收购30%股权并获得2个董事会席位。你只有一周时间做决定。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "接受高息民间借贷，维持独立经营",
+            "immediate_effects": {"cash_flow": 20, "debt_pressure": -22, "profit_margin": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "profit_margin", "delta": -12, "description": "高额利息持续侵蚀利润，财务压力越滚越大"}],
+            "econ_principle": "time_value_of_money",
+            "principle_explanation": "货币时间价值：今天的流动性有溢价，但28%的资金成本意味着每个月你都在为这个决定付出高昂代价。"
+          },
+          {
+            "id": "B",
+            "text": "出让30%股权给竞争对手，换取资金和资源",
+            "immediate_effects": {"cash_flow": 30, "debt_pressure": 10, "market_share": 5, "revenue": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": -8, "description": "股东利益冲突加剧，战略执行受制约"}],
+            "econ_principle": "principal_agent",
+            "principle_explanation": "委托代理问题：引入竞争对手股东后，委托人与代理人目标可能不一致，日常决策会变得复杂和受限。"
+          },
+          {
+            "id": "C",
+            "text": "紧急削减开支，裁员降薪过冬",
+            "immediate_effects": {"cash_flow": 12, "profit_margin": 6, "employee_satisfaction": -20, "retention_rate": -15, "revenue": -10},
+            "delayed_effects": [],
+            "econ_principle": "sunk_cost",
+            "principle_explanation": "裁员节省的现金是真实的，但流失的经验和客户关系同样是难以挽回的沉没成本，需要仔细权衡。"
+          },
+          {
+            "id": "D",
+            "text": "向供应链上下游申请赊账周转",
+            "immediate_effects": {"cash_flow": 15, "customer_satisfaction": -5, "debt_pressure": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "cash_flow", "delta": -10, "description": "供应商要求提前还款，资金链更紧"}],
+            "econ_principle": "supply_chain_finance",
+            "principle_explanation": "供应链金融本质是把压力转嫁给供应商，短期有效，但会损伤长期合作关系和供货稳定性。"
+          }
+        ]
+      },
+      {
+        "id": "sc_t3_s2",
+        "type": "strategic_choice",
+        "title": "债务压力下的战略收缩",
+        "description": "高息债务的代价正在显现：每月净利润的60%用于还本付息。股东开始质疑公司生存能力，有人建议出售非核心业务线，有人建议大幅缩减规模。一家风投表示有意投资，但要求大幅稀释现有股东权益，且需要加入董事会参与日常决策。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "出售非核心业务线，聚焦主营",
+            "immediate_effects": {"cash_flow": 25, "debt_pressure": 18, "revenue": -12, "market_share": -6},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "profit_margin", "delta": 8, "description": "聚焦后主营业务竞争力提升，效率改善"}],
+            "econ_principle": "core_competency",
+            "principle_explanation": "核心竞争力理论：聚焦于真正有差异化优势的业务，放弃看似多元化实则分散精力的边缘业务。"
+          },
+          {
+            "id": "B",
+            "text": "接受风投融资，稀释股权换发展空间",
+            "immediate_effects": {"cash_flow": 35, "debt_pressure": 25, "market_share": 8, "revenue": 10},
+            "delayed_effects": [],
+            "econ_principle": "venture_capital",
+            "principle_explanation": "风险资本注入改变了博弈格局——你拥有更少的股权，但可能获得更大的蛋糕，关键是与投资人目标是否一致。"
+          },
+          {
+            "id": "C",
+            "text": "破釜沉舟，押注一款新产品快速翻盘",
+            "immediate_effects": {"cash_flow": -15, "profit_margin": -10, "market_share": 12, "revenue": 15},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": 18, "description": "若新品爆发将带来大量订单，实现逆转"}],
+            "econ_principle": "high_risk_return",
+            "principle_explanation": "高风险高回报：困境中的集中押注是博弈策略，可能带来反转，也可能加速失败，需要对概率有清醒认知。"
+          },
+          {
+            "id": "D",
+            "text": "寻求被大公司战略收购",
+            "immediate_effects": {"cash_flow": 20, "debt_pressure": 20, "employee_satisfaction": -8, "market_share": 5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "employee_satisfaction", "delta": -10, "description": "文化整合困难，核心员工流失加剧"}],
+            "econ_principle": "mergers_acquisitions",
+            "principle_explanation": "并购整合解决了资金问题，但文化冲突和管理整合是新挑战，协同效应并不总能如预期般实现。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sc_theme4",
+    "title": "知识产权博弈",
+    "description": "当抄袭可以快速致富，当创新需要漫长投入，你如何选择？",
+    "scenarios": [
+      {
+        "id": "sc_t4_s1",
+        "type": "game_theory",
+        "title": "复制还是创新",
+        "description": "竞争对手推出了一款大受欢迎的新产品，市场调研显示60%的功能可以被直接复制，技术团队认为3个月就能完成。对手尚未在你们的主要市场申请专利，法务顾问说处于法律灰色地带。而继续自主研发则需要至少18个月。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "快速复制对手产品，抢占市场窗口",
+            "immediate_effects": {"market_share": 12, "revenue": 15, "customer_satisfaction": 5, "cash_flow": -8},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_share", "delta": -8, "description": "对手申请专利后发起侵权诉讼，被迫下架产品"}],
+            "econ_principle": "free_rider",
+            "principle_explanation": "搭便车效应：利用他人研发成果的短期收益是真实的，但若成为行业惯例，整个创新生态会崩溃，包括你自己。"
+          },
+          {
+            "id": "B",
+            "text": "坚持自主研发，走差异化路线",
+            "immediate_effects": {"cash_flow": -12, "profit_margin": -6, "employee_satisfaction": 8, "market_share": -5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 15, "description": "原创产品形成差异化壁垒，用户忠诚度高"}],
+            "econ_principle": "innovation_rent",
+            "principle_explanation": "创新租金：原创技术形成的竞争壁垒更难被复制，且不受法律威胁，是长期高于平均利润的来源。"
+          },
+          {
+            "id": "C",
+            "text": "购买对手专利授权，合法引进其技术",
+            "immediate_effects": {"profit_margin": -5, "market_share": 8, "cash_flow": -10, "customer_satisfaction": 5},
+            "delayed_effects": [],
+            "econ_principle": "transaction_costs",
+            "principle_explanation": "交易成本理论：付费使用知识产权比内部研发成本更低，但让你永远依赖对方的技术路线，失去主动权。"
+          },
+          {
+            "id": "D",
+            "text": "通过高薪挖人，间接获取对手技术",
+            "immediate_effects": {"revenue": 10, "employee_satisfaction": -8, "market_share": 6, "cash_flow": -6},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "cash_flow", "delta": -15, "description": "商业秘密诉讼启动，面临巨额赔偿风险"}],
+            "econ_principle": "information_asymmetry",
+            "principle_explanation": "通过人才流动获取信息在短期有效，但知识产权和商业秘密保护越来越严格，法律风险极高。"
+          }
+        ]
+      },
+      {
+        "id": "sc_t4_s2",
+        "type": "crisis_response",
+        "title": "专利诉讼风暴",
+        "description": "对手的律师函已经寄到：声称你们侵犯其3项核心专利，要求赔偿800万并立即停止销售相关产品。法务团队评估侵权成立概率70%。产品正处于最佳销售季，立即停售将损失本季度约40%的收入。你该如何应对这场危机？",
+        "choices": [
+          {
+            "id": "A",
+            "text": "庭外和解，支付赔偿金并取得授权",
+            "immediate_effects": {"cash_flow": -20, "profit_margin": -12, "market_share": 3, "revenue": 5},
+            "delayed_effects": [],
+            "econ_principle": "game_theory",
+            "principle_explanation": "博弈论视角：和解是纳什均衡——双方都清楚诉讼成本高昂，和解通常优于双输的诉讼对抗。"
+          },
+          {
+            "id": "B",
+            "text": "全力应诉，聘请顶级专利律师团",
+            "immediate_effects": {"cash_flow": -15, "profit_margin": -8, "employee_satisfaction": -5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 10, "description": "若胜诉将获得市场主动权，但诉讼期间业务严重受阻"}],
+            "econ_principle": "expected_value",
+            "principle_explanation": "期望值计算：30%胜诉概率下的期望价值需与和解成本比较，诉讼的时间成本和不确定性容易被低估。"
+          },
+          {
+            "id": "C",
+            "text": "紧急重新设计产品，绕开专利争议",
+            "immediate_effects": {"cash_flow": -18, "revenue": -15, "profit_margin": -10, "employee_satisfaction": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": 8, "description": "绕过专利的新版本上市，恢复销售"}],
+            "econ_principle": "substitute_goods",
+            "principle_explanation": "从根本上解决专利依赖问题，短期阵痛但长期建立了自主知识产权，不再受制于人。"
+          },
+          {
+            "id": "D",
+            "text": "反诉对方，声称对方也侵犯了你们的专利",
+            "immediate_effects": {"cash_flow": -10, "employee_satisfaction": -8, "revenue": -5},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": -15, "description": "双方专利战消耗大量资源，市场机会被第三方竞争者抢占"}],
+            "econ_principle": "mutually_assured_destruction",
+            "principle_explanation": "相互确保毁灭：专利战升级双方都会受损，对小公司而言消耗战更为致命，这是以卵击石的赌博。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sc_theme_contract",
+    "title": "契约精神考验",
+    "description": "在商业利益面前，是否坚守合同承诺？",
+    "scenarios": [
+      {
+        "id": "sc_tc_s1",
+        "type": "ethical_dilemma",
+        "title": "供应商合同困境",
+        "description": "公司与A供应商签订了3年长期合同，约定每月采购1000件零部件，单价50元。合同执行一年后，市场上出现了新的B供应商，同等质量的零部件售价仅35元，能为公司每月节省1.5万元成本。但合同有违约金条款：提前终止需支付剩余合同金额的30%作为违约金（约36万元）。财务部门计算后发现，即使支付违约金，两年内仍能净节省20万元。A供应商是一家小型家族企业，失去你们这个大客户可能导致其裁员甚至倒闭。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "支付违约金，立即切换到更便宜的供应商",
+            "immediate_effects": {"profit_margin": -8, "cash_flow": -12, "customer_satisfaction": 3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "profit_margin", "delta": 10, "description": "成本节省效果显现，利润率提升"}],
+            "econ_principle": "opportunity_cost",
+            "principle_explanation": "机会成本理论：已签合同不是沉没成本，违约金是可量化的代价，如果切换的长期收益超过违约成本，理性选择是违约。"
+          },
+          {
+            "id": "B",
+            "text": "信守合同，继续与A供应商合作至合同期满",
+            "immediate_effects": {"profit_margin": -5, "employee_satisfaction": 5, "customer_satisfaction": 2},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "market_share", "delta": 5, "description": "守信行为赢得业界口碑，带来新合作机会"}],
+            "econ_principle": "reputation_capital",
+            "principle_explanation": "声誉资本：契约精神是商业社会的信任基石，违约带来的声誉损失是难以量化的隐性成本，长期看可能远超短期节省。"
+          },
+          {
+            "id": "C",
+            "text": "与A供应商谈判，请求降价或修改合同条款",
+            "immediate_effects": {"profit_margin": 2, "cash_flow": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "profit_margin", "delta": -3, "description": "谈判失败，A供应商拒绝降价，关系恶化"}],
+            "econ_principle": "bargaining_power",
+            "principle_explanation": "谈判力量不对等：你有替代选项，A供应商没有，这种信息不对称使得谈判很可能演变为变相要挟。"
+          },
+          {
+            "id": "D",
+            "text": "等到合同到期再切换，暂时承受高成本",
+            "immediate_effects": {"profit_margin": -6, "employee_satisfaction": -3, "market_share": -2},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": 12, "description": "合同到期后顺利切换，成本大幅下降且无声誉损失"}],
+            "econ_principle": "time_consistency",
+            "principle_explanation": "时间一致性：短期损失换取长期信誉，这种策略在重复博弈中更优——未来合作伙伴会看到你的守信记录。"
+          }
+        ]
+      },
+      {
+        "id": "sc_tc_s2",
+        "type": "crisis_response",
+        "title": "客户违约危机",
+        "description": "你最大的客户——占公司收入40%的C公司突然陷入财务困境，拖欠了三个月货款共计120万元，并提出希望延期6个月支付且要求免除10%的滞纳金。你派人调查后发现，C公司确实遇到了严重现金流问题，但并未破产。如果你起诉并申请资产冻结，他们可能被迫宣布破产，你的货款可能血本无归；如果你同意延期，对方可能真的能熬过难关并继续合作，但也可能拖你下水。合同明确规定了违约责任和滞纳金条款。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "立即起诉，申请冻结资产，严格执行合同条款",
+            "immediate_effects": {"cash_flow": -15, "revenue": -20, "debt_pressure": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "revenue", "delta": -15, "description": "C公司破产，账款无法收回，失去最大客户"}],
+            "econ_principle": "creditor_rights",
+            "principle_explanation": "债权人权利：法律保护合同执行，但在对方资不抵债时，过于强硬可能导致双输——既收不回钱，又失去长期客户。"
+          },
+          {
+            "id": "B",
+            "text": "同意延期6个月，免除部分滞纳金，帮助客户渡过难关",
+            "immediate_effects": {"cash_flow": -8, "revenue": 5, "customer_satisfaction": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "revenue", "delta": 15, "description": "C公司恢复运营，感激之情带来更多订单"}],
+            "econ_principle": "relationship_lending",
+            "principle_explanation": "关系型借贷：基于信任和长期关系的灵活处理在小企业生态中很常见，但风险是对方可能无法兑现承诺。"
+          },
+          {
+            "id": "C",
+            "text": "要求C公司提供资产抵押或股权质押作为担保",
+            "immediate_effects": {"cash_flow": -5, "revenue": -8, "market_share": 3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "cash_flow", "delta": 8, "description": "抵押物变现，部分收回欠款"}],
+            "econ_principle": "collateral_requirement",
+            "principle_explanation": "抵押要求：在违约风险上升时要求额外担保是常见做法，但可能被视为趁火打劫，损害商业关系。"
+          },
+          {
+            "id": "D",
+            "text": "将债权打折出售给第三方催收公司，及时止损",
+            "immediate_effects": {"cash_flow": 8, "revenue": -12, "customer_satisfaction": -10},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "customer_satisfaction", "delta": -8, "description": "催收公司手段激进，C公司及行业对你产生负面评价"}],
+            "econ_principle": "debt_factoring",
+            "principle_explanation": "债权保理：将坏账风险转移给专业机构，但折价损失和声誉代价需要权衡——客户会记住你在危机时的选择。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sc_theme5",
+    "title": "公司存亡抉择",
+    "description": "经历重重考验，公司面临决定命运的最终战略抉择。",
+    "scenarios": [
+      {
+        "id": "sc_t5_s1",
+        "type": "strategic_choice",
+        "title": "生死存亡的十字路口",
+        "description": "你的公司经过5年发展，积累了一定市场地位，同时也背负着债务、人才流失和品牌损伤的历史包袱。此时出现了三个机会：大公司全资收购（溢价30%）、风投注资冲刺IPO（3年内上市）、与同规模同行战略合并（双方各持股50%）。这是决定公司命运的最后抉择。",
+        "choices": [
+          {
+            "id": "A",
+            "text": "接受全资收购，套现并入大平台",
+            "immediate_effects": {"cash_flow": 40, "debt_pressure": 35, "revenue": 15, "employee_satisfaction": -8},
+            "delayed_effects": [],
+            "econ_principle": "exit_strategy",
+            "principle_explanation": "退出策略：创业成功不只有上市一条路，战略收购是兑现价值的有效方式，但意味着创业旅程的终结。"
+          },
+          {
+            "id": "B",
+            "text": "接受风投注资，冲刺IPO",
+            "immediate_effects": {"cash_flow": 30, "market_share": 15, "revenue": 20, "profit_margin": -5},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "employee_satisfaction", "delta": 10, "description": "IPO预期激励全员，士气大振，吸引顶尖人才加入"}],
+            "econ_principle": "growth_premium",
+            "principle_explanation": "资本市场对高增长故事给予更高估值，但IPO的合规成本和公众压力是全新的挑战与约束。"
+          },
+          {
+            "id": "C",
+            "text": "与同行战略合并，强强联合",
+            "immediate_effects": {"market_share": 20, "revenue": 18, "employee_satisfaction": -5, "profit_margin": 8},
+            "delayed_effects": [{"delay_rounds": 3, "metric": "profit_margin", "delta": 10, "description": "规模效应和协同效应逐步释放，成本结构改善"}],
+            "econ_principle": "economies_of_scale",
+            "principle_explanation": "规模经济：合并后共享成本、互补资源，但整合过程中的文化冲突和权力博弈是不可忽视的障碍。"
+          },
+          {
+            "id": "D",
+            "text": "拒绝所有方案，坚持独立发展",
+            "immediate_effects": {"employee_satisfaction": 8, "revenue": -5, "market_share": -3, "profit_margin": -3},
+            "delayed_effects": [{"delay_rounds": 2, "metric": "market_share", "delta": -8, "description": "竞争格局持续不利，被资本化对手进一步甩开"}],
+            "econ_principle": "independence_premium",
+            "principle_explanation": "独立溢价是真实存在的，但在资本驱动的市场中，拒绝合作有时意味着错失最好的市场窗口期。"
+          }
+        ]
+      }
+    ]
+  }
+]
