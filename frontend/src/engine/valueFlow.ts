@@ -45,7 +45,7 @@ export function createValueSession(): { session: ValueSession; response: StartVa
     response: {
       game_id: gameId,
       values: getAllValues(),
-      message: '请从以下价值观中选择6个你认为最重要的',
+      message: '请从以下价值观中选择至少2个你认为最重要的',
     },
   };
 }
@@ -54,8 +54,9 @@ export function selectValues(session: ValueSession, selectedValues: string[]): S
   if (session.status !== 'selecting') {
     throw new ApiError(400, 'Game is not in selecting phase');
   }
-  if (selectedValues.length < 2 || selectedValues.length > 10) {
-    throw new ApiError(400, 'Please select 2-10 values');
+  const maxValues = getAllValues().length;
+  if (selectedValues.length < 2 || selectedValues.length > maxValues) {
+    throw new ApiError(400, `Please select 2-${maxValues} values`);
   }
   const selectedInfos = selectedValues.map(requireValue);
 

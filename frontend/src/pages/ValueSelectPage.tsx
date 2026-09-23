@@ -24,19 +24,17 @@ export default function ValueSelectPage() {
     if (localSelected.includes(valueId)) {
       setLocalSelected(localSelected.filter(id => id !== valueId))
     } else {
-      if (localSelected.length < 8) {
-        setLocalSelected([...localSelected, valueId])
-      }
+      setLocalSelected([...localSelected, valueId])
     }
   }
 
+  const canSubmit = localSelected.length >= 2
+
   const handleSubmit = () => {
-    if (localSelected.length >= 2 && localSelected.length <= 10) {
+    if (canSubmit) {
       selectValues(localSelected)
     }
   }
-
-  const canSubmit = localSelected.length >= 2 && localSelected.length <= 10
 
   if (isLoading && availableValues.length === 0) {
     return (
@@ -53,7 +51,7 @@ export default function ValueSelectPage() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-3">价值观排序游戏</h1>
           <p className="text-slate-400 text-lg mb-2">
-            从以下价值观中选择 <span className="text-indigo-400 font-semibold">2-10 个</span> 你认为最重要的
+            从以下价值观中选择 <span className="text-indigo-400 font-semibold">2-{availableValues.length} 个</span> 你认为最重要的
           </p>
           <p className="text-slate-500 text-sm">
             游戏将通过真实案例帮助你理解自己的价值观体系
@@ -65,11 +63,11 @@ export default function ValueSelectPage() {
           <div className="inline-block px-6 py-3 bg-slate-900/60 border border-slate-700 rounded-xl">
             <span className="text-slate-400 text-sm">已选择：</span>
             <span className={`text-2xl font-bold ml-2 ${
-              localSelected.length >= 6 ? 'text-indigo-400' : 'text-slate-500'
+              canSubmit ? 'text-indigo-400' : 'text-slate-500'
             }`}>
               {localSelected.length}
             </span>
-            <span className="text-slate-500 text-sm">/2-10</span>
+            <span className="text-slate-500 text-sm">/2-{availableValues.length}</span>
           </div>
         </div>
 
@@ -88,14 +86,12 @@ export default function ValueSelectPage() {
               <button
                 key={value.id}
                 onClick={() => toggleValue(value.id)}
-                disabled={!isSelected && localSelected.length >= 8}
                 className={`
-                  p-5 rounded-xl border-2 transition-all duration-200 text-left
+                  p-5 rounded-xl border-2 transition-all duration-200 text-left cursor-pointer
                   ${isSelected
                     ? 'bg-indigo-900/40 border-indigo-500 shadow-lg shadow-indigo-500/20'
                     : 'bg-slate-900/60 border-slate-700 hover:border-slate-500'
                   }
-                  ${!isSelected && localSelected.length >= 8 ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer'}
                 `}
               >
                 <div className="flex items-start justify-between mb-2">
@@ -139,7 +135,7 @@ export default function ValueSelectPage() {
               }
             `}
           >
-            {isLoading ? '正在准备...' : canSubmit ? '开始比较' : `请选择 ${6 - localSelected.length} 个价值观`}
+            {isLoading ? '正在准备...' : canSubmit ? '开始比较' : `请选择 ${2 - localSelected.length} 个价值观`}
           </button>
         </div>
       </div>

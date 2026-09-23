@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { VALUES } from '../engine/data'
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -25,7 +26,7 @@ export default function HomePage() {
               </div>
               <h2 className="text-2xl font-bold text-white mb-3">价值观排序游戏</h2>
               <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                从 10 个核心价值中选择 6-8 个，通过真实历史案例中的艰难抉择，发现你内心真正的价值观排序
+                从 {VALUES.length} 个核心价值中选择至少 2 个，通过真实历史案例中的艰难抉择，发现你内心真正的价值观排序
               </p>
             </div>
             <div className="space-y-2 text-left">
