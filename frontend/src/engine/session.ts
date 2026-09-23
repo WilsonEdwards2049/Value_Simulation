@@ -1,21 +1,9 @@
-import type { GameState } from '../types/game';
-
 /** file:// 下部分浏览器不提供 crypto.randomUUID，需降级。 */
 export function newGameId(): string {
   if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
     return crypto.randomUUID();
   }
   return `id-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
-}
-
-/** 对应后端 core/session_store.py 的 GameSession。 */
-export interface GameSession {
-  state: GameState;
-  scenario_history: string[];
-  metric_snapshots: Array<Record<string, number>>;
-  current_scenario_id: string | null;
-  theme_idx: number;
-  scenario_in_theme: number;
 }
 
 export interface ValueComparison {
