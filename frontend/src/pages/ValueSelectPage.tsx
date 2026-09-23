@@ -51,7 +51,7 @@ export default function ValueSelectPage() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-3">价值观排序游戏</h1>
           <p className="text-slate-400 text-lg mb-2">
-            从以下价值观中选择 <span className="text-indigo-400 font-semibold">2-{availableValues.length} 个</span> 你认为最重要的
+            从以下价值观中选择 <span className="text-indigo-400 font-semibold">2-{availableValues.length} 个</span>，两两 PK 进行排序
           </p>
           <p className="text-slate-500 text-sm">
             游戏将通过真实案例帮助你理解自己的价值观体系
