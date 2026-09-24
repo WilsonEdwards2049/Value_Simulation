@@ -17,6 +17,9 @@ build/
 *.bak
 *.tmp
 
+# Claude Code
+.claude/
+
 # Editor / OS
 .vscode/
 .idea/
