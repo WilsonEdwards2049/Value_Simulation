@@ -8,7 +8,7 @@ interface Registry {
   values: Record<string, ValueSession>;
 }
 
-const STORAGE_KEY = 'value-sim-sessions';
+const STORAGE_KEY = 'value-sim-sessions-v2';
 
 function load(): Registry {
   try {

@@ -161,7 +161,7 @@ export const useValueStore = create<ValueGameState & ValueStoreActions>()(
       }
     }),
     {
-      name: 'value-sim-values',
+      name: 'value-sim-values-v2',
       // isLoading/error 是瞬时态，不应跨刷新保留
       partialize: (s) => ({
         status: s.status,

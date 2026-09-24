@@ -69,7 +69,7 @@ export function selectValues(session: ValueSession, selectedValues: string[]): S
       `所选价值观之间只有 ${pairs.length} 个可比较的配对，至少需要 ${minPairsNeeded} 个才能完成排序。\n` +
         `当前可比较的配对：\n${available}\n\n请尝试选择以下组合之一：\n` +
         '  推荐组合1: 正义、忠诚、真实、生命、自由、安全\n' +
-        '  推荐组合2: 信仰、亲情、正义、忠诚、真实、不伤害无辜'
+        '  推荐组合2: 信仰、亲情、正义、忠诚、真实'
     );
   }
 
@@ -296,7 +296,7 @@ export function getValueSummary(session: ValueSession): ValueSummaryResponse {
 }
 
 const TOP_VALUE_ANALYSIS: Record<string, string> = {
-  justice: '你是一个正义导向的人，愿意为公平和正义付出代价，即使这意味着与亲人、组织或社会规范产生冲突。',
+  justice: '你是一个正义导向的人，重视公平、追究作恶与保护无辜，反对让无关者受到牵连，愿意为此付出代价，即使这意味着与亲人、组织或社会规范产生冲突。',
   freedom: '你高度珍视个人自由和自主选择，倾向于抵制任何形式的强制和控制，即使这可能带来风险。',
   family: '你把家庭和亲情放在首位，愿意为保护家人做出重大牺牲，血缘关系在你心中具有特殊地位。',
   life: '你坚守生命神圣的原则，反对任何形式的杀戮和暴力，相信生命权高于其他一切价值。',
@@ -305,7 +305,6 @@ const TOP_VALUE_ANALYSIS: Record<string, string> = {
   loyalty: '你是一个重视承诺和忠诚的人，对组织、团队和朋友的忠诚在你心中占据重要位置。',
   safety: '你是一个务实的人，认为公共安全和集体利益应该优先于个人自由和权利。',
   environment: '你高度关注生态和环境保护，愿意为可持续发展付出经济代价。',
-  no_harm: '你具有强烈的同情心，难以接受无辜者受到伤害，即使这可能妨碍更大的目标。',
   contract: '你是一个重信守诺的人，契约精神和商业诚信在你心中占据重要位置，即使履约会带来损失，你也倾向于坚守承诺。',
 };
 
