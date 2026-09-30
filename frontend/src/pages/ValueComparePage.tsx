@@ -146,24 +146,24 @@ export default function ValueComparePage() {
     const isSecondChallenge = stage === 'second_challenge'
 
     return (
-      <div className="min-h-screen bg-slate-950 py-6 px-4">
+      <div className="min-h-screen bg-slate-950 py-4 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Progress Header */}
-          <div className="mb-6 flex items-center justify-between">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h2 className="text-slate-400 text-xl mb-1">
+              <h2 className="text-slate-400 text-base mb-1">
                 {isSecondChallenge ? '第三步：再次确认' : '第二步：案例挑战'}
               </h2>
-              <h1 className="text-5xl font-bold text-white">
+              <h1 className="text-3xl font-bold text-white">
                 {value_a.name} vs {value_b.name}
               </h1>
             </div>
             <div className="text-right">
-              <div className="text-slate-400 text-xl mb-1">进度</div>
-              <div className="text-xl font-bold text-indigo-400">
+              <div className="text-slate-400 text-base mb-1">进度</div>
+              <div className="text-lg font-bold text-indigo-400">
                 {progress.completed}/{progress.total}
               </div>
-              <div className="w-32 h-1.5 bg-slate-800 rounded-full mt-2">
+              <div className="w-32 h-1.5 bg-slate-800 rounded-full mt-1">
                 <div
                   className="h-1.5 bg-indigo-500 rounded-full transition-all duration-500"
                   style={{ width: `${progress.percentage}%` }}
@@ -173,131 +173,133 @@ export default function ValueComparePage() {
           </div>
 
           {/* Challenge Notice */}
-          <div className="mb-4 p-4 bg-amber-900/30 border border-amber-700/50 rounded-lg">
-            <p className="text-amber-300 text-xl">
+          <div className="mb-3 p-3 bg-amber-900/30 border border-amber-700/50 rounded-lg">
+            <p className="text-amber-300 text-base">
               ⚡ {isSecondChallenge ? '让我们再看一个真实案例，确认你的新选择...' : `你选择了 ${chosenValue.name}。现在让我们用一个真实案例挑战你的选择...`}
             </p>
           </div>
 
-          {/* Case Card */}
-          {caseInfo && (
-            <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 mb-6">
-              {/* Case Header */}
-              <div className="mb-4 pb-4 border-b border-slate-700">
-                <h2 className="text-5xl font-bold text-white mb-2">{caseInfo.title}</h2>
-                <div className="flex items-center gap-4 text-slate-400 text-xl">
-                  <span>👤 {caseInfo.real_person}</span>
-                  <span>📅 {caseInfo.year}年</span>
-                  <span>📍 {caseInfo.location}</span>
-                </div>
-              </div>
-
-              {/* Context */}
-              <div className="mb-4">
-                <h3 className="text-indigo-400 font-semibold mb-2">历史背景</h3>
-                <p className="text-slate-300 text-xl leading-relaxed">{caseInfo.context}</p>
-              </div>
-
-              {/* Dilemma */}
-              <div className="mb-4 p-4 bg-slate-800/60 rounded-lg border-l-4 border-amber-500">
-                <h3 className="text-amber-400 font-semibold mb-2">核心困境</h3>
-                <p className="text-slate-300 text-xl leading-relaxed">{caseInfo.dilemma}</p>
-              </div>
-
-              {/* Actual Choice */}
-              <div className="mb-4">
-                <h3 className="text-emerald-400 font-semibold mb-2">真实选择</h3>
-                <p className="text-slate-300 text-xl leading-relaxed">{caseInfo.actual_choice}</p>
-              </div>
-
-              {/* Consequences */}
-              <div className="mb-4">
-                <h3 className="text-red-400 font-semibold mb-2">后果</h3>
-                <p className="text-slate-300 text-xl leading-relaxed">{caseInfo.consequences}</p>
-              </div>
-
-              {/* Reflection */}
-              <div className="p-4 bg-indigo-950/40 rounded-lg border border-indigo-800/50">
-                <p className="text-indigo-300 text-xl italic">{caseInfo.reflection}</p>
-              </div>
-            </div>
-          )}
-
-          {/* Choice Buttons */}
-          <div className="mb-6 bg-slate-900 border border-slate-700 rounded-xl p-6">
-            <h3 className="text-white font-semibold mb-4">读完这个真实案例后，你的选择是？</h3>
-            <div className="space-y-3">
-              <button
-                onClick={() => handleChoiceSelect('value_a')}
-                disabled={isLoading}
-                className={`
-                  w-full p-4 rounded-lg border-2 text-left transition-all duration-200
-                  ${selectedChoice === 'value_a'
-                    ? 'bg-indigo-900/40 border-indigo-500'
-                    : 'bg-slate-800/60 border-slate-700 hover:border-slate-500'
-                  }
-                  ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-                `}
-              >
-                <div className="flex items-center gap-3">
-                  {selectedChoice === 'value_a' && (
-                    <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-white font-semibold mb-1">{value_a.name}</div>
-                    <p className="text-slate-400 text-xl">{caseInfo?.choice_a_text}</p>
+          <div>
+            {/* Case Card */}
+            {caseInfo && (
+              <div className="bg-slate-900 border border-slate-700 rounded-xl p-4 mb-4">
+                {/* Case Header */}
+                <div className="mb-3 pb-3 border-b border-slate-700">
+                  <h2 className="text-3xl font-bold text-white mb-1">{caseInfo.title}</h2>
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-400 text-base">
+                    <span>👤 {caseInfo.real_person}</span>
+                    <span>📅 {caseInfo.year}年</span>
+                    <span>📍 {caseInfo.location}</span>
                   </div>
                 </div>
-              </button>
 
-              <button
-                onClick={() => handleChoiceSelect('value_b')}
-                disabled={isLoading}
-                className={`
-                  w-full p-4 rounded-lg border-2 text-left transition-all duration-200
-                  ${selectedChoice === 'value_b'
-                    ? 'bg-indigo-900/40 border-indigo-500'
-                    : 'bg-slate-800/60 border-slate-700 hover:border-slate-500'
-                  }
-                  ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-                `}
-              >
-                <div className="flex items-center gap-3">
-                  {selectedChoice === 'value_b' && (
-                    <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-white font-semibold mb-1">{value_b.name}</div>
-                    <p className="text-slate-400 text-xl">{caseInfo?.choice_b_text}</p>
-                  </div>
+                {/* Context */}
+                <div className="mb-3 xl:col-span-2">
+                  <h3 className="text-indigo-400 font-semibold mb-1">历史背景</h3>
+                  <p className="text-slate-300 text-base leading-relaxed">{caseInfo.context}</p>
                 </div>
-              </button>
-            </div>
-          </div>
 
-          {/* Submit Button */}
-          <div className="text-center">
-            <button
-              onClick={handleSubmit}
-              disabled={!selectedChoice || isLoading}
-              className={`
-                px-10 py-4 rounded-xl font-semibold text-xl transition-all duration-200
-                ${selectedChoice && !isLoading
-                  ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 active:scale-[0.98]'
-                  : 'bg-slate-800 text-slate-600 cursor-not-allowed'
-                }
-              `}
-            >
-              {isLoading ? '正在处理...' : '确认选择'}
-            </button>
+                {/* Dilemma */}
+                <div className="mb-3 p-3 bg-slate-800/60 rounded-lg border-l-4 border-amber-500">
+                  <h3 className="text-amber-400 font-semibold mb-1">核心困境</h3>
+                  <p className="text-slate-300 text-base leading-relaxed">{caseInfo.dilemma}</p>
+                </div>
+
+                {/* Actual Choice */}
+                <div className="mb-3">
+                  <h3 className="text-emerald-400 font-semibold mb-1">真实选择</h3>
+                  <p className="text-slate-300 text-base leading-relaxed">{caseInfo.actual_choice}</p>
+                </div>
+
+                {/* Consequences */}
+                <div className="mb-3">
+                  <h3 className="text-red-400 font-semibold mb-1">后果</h3>
+                  <p className="text-slate-300 text-base leading-relaxed">{caseInfo.consequences}</p>
+                </div>
+
+                {/* Reflection */}
+                <div className="p-3 bg-indigo-950/40 rounded-lg border border-indigo-800/50">
+                  <p className="text-indigo-300 text-base italic">{caseInfo.reflection}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Choice Buttons */}
+              <div className="mb-4 bg-slate-900 border border-slate-700 rounded-xl p-4">
+                <h3 className="text-white font-semibold mb-3">读完这个真实案例后，你的选择是？</h3>
+                <div className="space-y-2">
+                  <button
+                    onClick={() => handleChoiceSelect('value_a')}
+                    disabled={isLoading}
+                    className={`
+                      w-full p-3 rounded-lg border-2 text-left transition-all duration-200
+                      ${selectedChoice === 'value_a'
+                        ? 'bg-indigo-900/40 border-indigo-500'
+                        : 'bg-slate-800/60 border-slate-700 hover:border-slate-500'
+                      }
+                      ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+                    `}
+                  >
+                    <div className="flex items-center gap-3">
+                      {selectedChoice === 'value_a' && (
+                        <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0">
+                          <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
+                      <div>
+                        <div className="text-white font-semibold mb-1">{value_a.name}</div>
+                        <p className="text-slate-400 text-base">{caseInfo?.choice_a_text}</p>
+                      </div>
+                    </div>
+                  </button>
+
+                  <button
+                    onClick={() => handleChoiceSelect('value_b')}
+                    disabled={isLoading}
+                    className={`
+                      w-full p-3 rounded-lg border-2 text-left transition-all duration-200
+                      ${selectedChoice === 'value_b'
+                        ? 'bg-indigo-900/40 border-indigo-500'
+                        : 'bg-slate-800/60 border-slate-700 hover:border-slate-500'
+                      }
+                      ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
+                    `}
+                  >
+                    <div className="flex items-center gap-3">
+                      {selectedChoice === 'value_b' && (
+                        <div className="w-6 h-6 rounded-full bg-indigo-500 flex items-center justify-center flex-shrink-0">
+                          <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                      )}
+                      <div>
+                        <div className="text-white font-semibold mb-1">{value_b.name}</div>
+                        <p className="text-slate-400 text-base">{caseInfo?.choice_b_text}</p>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="text-center">
+                <button
+                  onClick={handleSubmit}
+                  disabled={!selectedChoice || isLoading}
+                  className={`
+                    px-8 py-3 rounded-xl font-semibold text-base transition-all duration-200
+                    ${selectedChoice && !isLoading
+                      ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 active:scale-[0.98]'
+                      : 'bg-slate-800 text-slate-600 cursor-not-allowed'
+                    }
+                  `}
+                >
+                  {isLoading ? '正在处理...' : '确认选择'}
+                </button>
+              </div>
           </div>
         </div>
       </div>
