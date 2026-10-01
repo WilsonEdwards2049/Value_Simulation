@@ -1392,7 +1392,7 @@
       "freedom"
     ],
     "direction": "faith_over_freedom",
-    "intuitive_lean": "faith",
+    "intuitive_lean": "freedom",
     "title": "陈寅恪拒任中古史研究所所长",
     "real_person": "陈寅恪",
     "year": 1953,
@@ -1404,7 +1404,7 @@
     "choice_support_a": "接受任职：学术不应脱离国家和社会的共同理想。即使研究方法受到一定限制，只要方向正确，仍然可以推进学术事业（信仰 > 自由）",
     "choice_support_b": "拒绝任职：学术研究必须从事实和证据出发，不能预先接受任何不可质疑的结论。即使失去重要职位，也应保留独立判断（自由 > 信仰）",
     "reflection": "如果接受一个重要职位就必须接受一套你并不完全认同的思想前提，你会接受吗？",
-    "impact_score": 8.5,
+    "impact_score": 9.6,
     "controversy_level": 8.5
   },
   {
