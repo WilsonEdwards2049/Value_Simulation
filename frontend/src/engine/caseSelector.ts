@@ -32,8 +32,8 @@ export function prepareCaseForDisplay(
 }
 
 /**
- * 挑选一个情感倾向为 targetLean、且未展示过的案例，取冲击力最强者。
- * 若无 intuitive_lean 标注，回退到按 direction 匹配。
+ * 挑选一个情感倾向为 targetLean、且未展示过的案例。
+ * 契约精神与公共安全配对随机选择，其他配对取冲击力最强者；无 lean 时回退到 direction。
  */
 export function selectChallengeCase(
   allCases: ValueCase[],
@@ -52,6 +52,11 @@ export function selectChallengeCase(
   }
 
   if (candidates.length === 0) return null;
+
+  const [valueA, valueB] = candidates[0].value_pair;
+  if ([valueA, valueB].includes('contract') && [valueA, valueB].includes('safety')) {
+    return candidates[Math.floor(Math.random() * candidates.length)];
+  }
 
   return [...candidates].sort((a, b) => b.impact_score - a.impact_score)[0];
 }
