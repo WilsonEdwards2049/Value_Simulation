@@ -33,7 +33,7 @@ export function prepareCaseForDisplay(
 
 /**
  * 挑选一个情感倾向为 targetLean、且未展示过的案例。
- * 契约精神与公共安全配对随机选择，其他配对取冲击力最强者；无 lean 时回退到 direction。
+ * 契约精神/正义与公共安全配对随机选择，其他配对取冲击力最强者；无 lean 时回退到 direction。
  */
 export function selectChallengeCase(
   allCases: ValueCase[],
@@ -54,7 +54,11 @@ export function selectChallengeCase(
   if (candidates.length === 0) return null;
 
   const [valueA, valueB] = candidates[0].value_pair;
-  if ([valueA, valueB].includes('contract') && [valueA, valueB].includes('safety')) {
+  const safetyPair = [valueA, valueB].includes('safety');
+  const randomizedPair =
+    safetyPair &&
+    ([valueA, valueB].includes('contract') || [valueA, valueB].includes('justice'));
+  if (randomizedPair) {
     return candidates[Math.floor(Math.random() * candidates.length)];
   }
 
