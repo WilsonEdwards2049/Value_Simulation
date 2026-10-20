@@ -20,6 +20,7 @@ export interface ValueCase {
   reflection: string;
   impact_score: number;
   controversy_level: number;
+  hidden_for_pairs?: [string, string][];
 }
 
 export const CASES = casesJson as unknown as ValueCase[];
@@ -35,6 +36,11 @@ export function getValueById(valueId: string): ValueInfo | undefined {
 
 export function getCasesForPair(valueA: string, valueB: string): ValueCase[] {
   return CASES.filter((c) => {
+    const hiddenForPair = c.hidden_for_pairs?.some(
+      ([a, b]) => (a === valueA && b === valueB) || (a === valueB && b === valueA)
+    );
+    if (hiddenForPair) return false;
+
     const [a, b] = c.value_pair;
     return (a === valueA && b === valueB) || (a === valueB && b === valueA);
   });
