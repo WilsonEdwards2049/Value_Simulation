@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import { useValueStore } from './store/valueStore'
 import HomePage from './pages/HomePage'
 
@@ -9,9 +9,31 @@ import ValueSummaryPage from './pages/ValueSummaryPage'
 
 export default function App() {
   const valueStatus = useValueStore((s) => s.status)
+  const isLoading = useValueStore((s) => s.isLoading)
+  const reset = useValueStore((s) => s.reset)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const returnToHome = () => {
+    const gameInProgress = valueStatus === 'selecting' || valueStatus === 'comparing'
+    if (gameInProgress && !window.confirm('当前游戏进度将丢失，确定返回首页吗？')) return
+    reset()
+    navigate('/', { replace: true })
+  }
 
   return (
-    <Routes>
+    <>
+      {location.pathname !== '/' && (
+        <button
+          type="button"
+          onClick={returnToHome}
+          disabled={isLoading}
+          className="fixed bottom-4 right-4 z-50 rounded-lg border border-slate-600 bg-slate-800/90 px-4 py-2 text-sm text-slate-300 shadow-lg backdrop-blur transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          返回初始页
+        </button>
+      )}
+      <Routes>
       {/* Home Page */}
       <Route path="/" element={<HomePage />} />
 
@@ -53,6 +75,7 @@ export default function App() {
 
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+      </Routes>
+    </>
   )
 }
