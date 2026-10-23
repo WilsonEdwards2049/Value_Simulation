@@ -69,8 +69,8 @@ export interface UIStrings {
 
 const zhCN: UIStrings = {
   appTitle: '价值观模拟器',
-  homeSubtitle: '很多人都相信自己的价值观足够坚定，直到现实逼着他们付出代价。',
-  homeQuestion: '你自以为坚定的价值观，是否经得起现实困境的挑战？',
+  homeSubtitle: '很多价值观看起来不证自明，彼此之间却常常暗含冲突。我们以为自己同时坚守着它们，直到两难摆在面前，才开始认真追问：我是否真的对某些价值寸步不让？',
+  homeQuestion: '如果你确信自己有绝不退让的坚持，就在这场游戏里，让它经受充分的挑战。',
   homeGameTitle: '价值观排序游戏',
   homeGameDesc: '从 {n} 个核心价值中选择至少 2 个，通过案例中的艰难抉择，发现你内心真正的价值观排序',
   homeBullet1: '借鉴现实议题的道德困境',
@@ -159,8 +159,8 @@ const zhCN: UIStrings = {
 const zhTW: UIStrings = {
   ...zhCN,
   appTitle: '價值觀模擬器',
-  homeSubtitle: '很多人都相信自己的價值觀足夠堅定，直到現實逼著他們付出代價。',
-  homeQuestion: '你自以為堅定的價值觀，是否經得起現實困境的挑戰？',
+  homeSubtitle: '很多價值觀看起來不證自明，彼此之間卻常常暗含衝突。我們以為自己同時堅守著它們，直到兩難擺在面前，才開始認真追問：我是否真的對某些價值寸步不讓？',
+  homeQuestion: '如果你確信自己有絕不退讓的堅持，就在這場遊戲裡，讓它經受充分的挑戰。',
   homeGameTitle: '價值觀排序遊戲',
   homeGameDesc: '從 {n} 個核心價值中選擇至少 2 個，透過案例中的艱難抉擇，發現你內心真正的價值觀排序',
   homeBullet1: '借鑑現實議題的道德困境',
@@ -247,8 +247,8 @@ const zhTW: UIStrings = {
 
 const en: UIStrings = {
   appTitle: 'Values Simulator',
-  homeSubtitle: 'Many of us believe our values are firm, until reality demands a price for them.',
-  homeQuestion: 'Will your values hold when a real dilemma puts them to the test?',
+  homeSubtitle: 'Many values look self-evident, yet they often conflict with one another. We believe we hold them all firmly, until a real dilemma arrives and forces the question: is there any value I truly will not yield on?',
+  homeQuestion: 'If you believe you have a conviction you will never surrender, then let this game put it to the test.',
   homeGameTitle: 'Value Ranking Game',
   homeGameDesc:
     'Choose at least 2 of {n} core values and rank them through difficult choices in real cases',
@@ -337,8 +337,8 @@ const en: UIStrings = {
 
 const de: UIStrings = {
   appTitle: 'Werte-Simulator',
-  homeSubtitle: 'Viele glauben, ihre Werte seien fest, bis die Wirklichkeit einen Preis dafür verlangt.',
-  homeQuestion: 'Halten deine Werte einem echten Dilemma stand?',
+  homeSubtitle: 'Viele Werte wirken selbstverständlich, geraten aber oft miteinander in Konflikt. Wir glauben, alle gleichermaßen festzuhalten, bis ein echtes Dilemma die Frage erzwingt: Gibt es einen Wert, von dem ich wirklich niemals abweiche?',
+  homeQuestion: 'Wenn du überzeugt bist, eine Haltung zu haben, die du niemals aufgibst, dann stell sie in diesem Spiel auf die Probe.',
   homeGameTitle: 'Werte-Ranking-Spiel',
   homeGameDesc:
     'Wähle mindestens 2 von {n} Kernwerten und ordne sie durch schwierige Entscheidungen in echten Fällen',
@@ -426,8 +426,8 @@ const de: UIStrings = {
 
 const ja: UIStrings = {
   appTitle: '価値観シミュレーター',
-  homeSubtitle: '自分の価値観は揺るがない。そう信じている人は少なくありません。',
-  homeQuestion: 'しかし、現実のジレンマが代償を求めたとき、その価値観は本当に耐えられるでしょうか。',
+  homeSubtitle: '多くの価値観は自明に見えますが、しばしば互いに衝突します。私たちはそれらすべてを固く守っているつもりでも、本当のジレンマに直面して初めて、こう問い直すのです——自分が決して譲れない価値は、本当にあるのかと。',
+  homeQuestion: '譲れない確信があると信じるなら、このゲームで存分に試してみてください。',
   homeGameTitle: '価値観ランキングゲーム',
   homeGameDesc: '{n} の核心的価値から少なくとも 2 つを選び、実際の事例の難しい選択を通して本当の価値観の順位を見つけましょう',
   homeBullet1: '現実の課題から生まれた道徳的ジレンマ',
@@ -514,8 +514,8 @@ const ja: UIStrings = {
 
 const fr: UIStrings = {
   appTitle: 'Simulateur de valeurs',
-  homeSubtitle: "Beaucoup pensent que leurs valeurs sont inébranlables, jusqu'à ce que le réel leur impose un prix.",
-  homeQuestion: 'Les vôtres résisteront-elles à un véritable dilemme ?',
+  homeSubtitle: "Beaucoup de valeurs semblent aller de soi, mais elles entrent souvent en conflit. Nous croyons les défendre toutes fermement, jusqu'à ce qu'un vrai dilemme nous force à demander : y a-t-il une valeur à laquelle je ne céderai jamais ?",
+  homeQuestion: 'Si vous pensez avoir une conviction à laquelle vous ne renoncerez jamais, mettez-la à l’épreuve dans ce jeu.',
   homeGameTitle: 'Jeu de classement des valeurs',
   homeGameDesc:
     'Choisissez au moins 2 des {n} valeurs essentielles et classez-les à travers des choix difficiles issus de cas réels',
@@ -603,8 +603,8 @@ const fr: UIStrings = {
 
 const ko: UIStrings = {
   appTitle: '가치관 시뮬레이터',
-  homeSubtitle: '많은 사람이 자신의 가치관은 확고하다고 믿습니다.',
-  homeQuestion: '하지만 현실이 대가를 요구할 때, 그 가치관은 과연 견딜 수 있을까요?',
+  homeSubtitle: '많은 가치관은 당연해 보이지만 서로 충돌하기 마련입니다. 우리는 그것들을 모두 굳게 지킨다고 믿지만, 진짜 딜레마 앞에서야 비로소 묻습니다. 과연 내가 결코 양보하지 않을 가치는 무엇인가?',
+  homeQuestion: '결코 물러서지 않을 확신이 있다고 믿는다면, 이 게임에서 충분히 시험해 보세요.',
   homeGameTitle: '가치관 순위 게임',
   homeGameDesc: '{n}개의 핵심 가치 중 최소 2개를 선택하고, 실제 사례의 어려운 선택을 통해 진정한 가치관 순위를 발견하세요',
   homeBullet1: '현실의 쟁점에서 가져온 도덕적 딜레마',
@@ -691,8 +691,8 @@ const ko: UIStrings = {
 
 const es: UIStrings = {
   appTitle: 'Simulador de valores',
-  homeSubtitle: 'Muchos creemos que nuestros valores son firmes, hasta que la realidad nos exige un precio.',
-  homeQuestion: '¿Resistirán los tuyos ante un verdadero dilema?',
+  homeSubtitle: 'Muchos valores parecen evidentes, pero a menudo entran en conflicto entre sí. Creemos defenderlos todos con firmeza, hasta que un verdadero dilema nos obliga a preguntar: ¿hay algún valor al que realmente no ceda?',
+  homeQuestion: 'Si crees tener una convicción a la que nunca renunciarás, ponla a prueba en este juego.',
   homeGameTitle: 'Juego de clasificación de valores',
   homeGameDesc:
     'Elige al menos 2 de los {n} valores fundamentales y ordénalos mediante decisiones difíciles en casos reales',
