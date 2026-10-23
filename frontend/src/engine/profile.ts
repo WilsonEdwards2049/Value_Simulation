@@ -1,9 +1,11 @@
 import type { ValueSummaryResponse } from '../types/values'
 import {
   isValueId,
+  pairIdOf,
   type AdjustmentLevel,
   type DerivedProfile,
   type ProfileRadarDatum,
+  type ValueId,
 } from '../types/profile'
 
 function adjustmentLevelOf(count: number): AdjustmentLevel {
@@ -15,6 +17,8 @@ function adjustmentLevelOf(count: number): AdjustmentLevel {
 export function deriveProfile(summary: ValueSummaryResponse): DerivedProfile {
   const topId = summary.ranking[0]?.value.id
   const secondId = summary.ranking[1]?.value.id
+  const validTop: ValueId | null = topId && isValueId(topId) ? topId : null
+  const validSecond: ValueId | null = secondId && isValueId(secondId) ? secondId : null
   const radar: ProfileRadarDatum[] = []
 
   for (const item of summary.ranking.slice(0, 5)) {
@@ -28,8 +32,9 @@ export function deriveProfile(summary: ValueSummaryResponse): DerivedProfile {
   }
 
   return {
-    topId: topId && isValueId(topId) ? topId : null,
-    secondId: secondId && isValueId(secondId) ? secondId : null,
+    topId: validTop,
+    secondId: validSecond,
+    pairId: validTop && validSecond ? pairIdOf(validTop, validSecond) : null,
     adjustmentLevel: adjustmentLevelOf(summary.adjustments_made),
     radar,
     useBars: summary.ranking.length < 3,

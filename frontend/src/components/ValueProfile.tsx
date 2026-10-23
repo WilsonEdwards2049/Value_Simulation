@@ -4,6 +4,7 @@ import { PROFILE } from '../i18n/profile'
 import { deriveProfile } from '../engine/profile'
 import { getValueById } from '../engine/data'
 import ValueRadar, { type RadarDatum } from './ValueRadar'
+import CharacterMatch from './CharacterMatch'
 
 interface ValueProfileProps {
   summary: ValueSummaryResponse
@@ -55,6 +56,8 @@ export default function ValueProfile({ summary }: ValueProfileProps) {
           </span>
         </div>
       </div>
+
+      <CharacterMatch pairId={profile.pairId} />
 
       <div className="grid md:grid-cols-2 gap-3 mb-3">
         <div className="bg-slate-900 border border-slate-700 rounded-xl p-4">
