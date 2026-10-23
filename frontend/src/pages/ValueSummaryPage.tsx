@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useValueStore } from '../store/valueStore'
 import { useI18n, stripMarkdownBold } from '../i18n'
+import ValueProfile from '../components/ValueProfile'
 
 export default function ValueSummaryPage() {
   const navigate = useNavigate()
@@ -40,6 +41,8 @@ export default function ValueSummaryPage() {
             })}
           </p>
         </div>
+
+        <ValueProfile summary={summary} />
 
         {/* Top Card */}
         <div className="mb-3 p-4 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500 rounded-2xl">
