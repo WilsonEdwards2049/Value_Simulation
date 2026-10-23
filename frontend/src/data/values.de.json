@@ -1,0 +1,62 @@
+[
+  {
+    "id": "justice",
+    "name": "Gerechtigkeit",
+    "description": "Fairness wahren, Unrecht ahnden, Unschuldige und Schwache schützen; Unschuldige dürfen nicht hineingezogen werden, auch wenn es teuer wird",
+    "examples": ["Korruption aufdecken", "Unschuldige schützen", "Die Wahrheit ans Licht bringen", "Gegen Ungerechtigkeit kämpfen", "Die Schwachen verteidigen"]
+  },
+  {
+    "id": "freedom",
+    "name": "Freiheit",
+    "description": "Das Recht auf persönliche Entscheidung sowie Autonomie von Denken und Handeln, frei von Zwang durch andere",
+    "examples": ["Meinungsfreiheit", "Freizügigkeit", "Gehorsam verweigern", "Ideale verfolgen"]
+  },
+  {
+    "id": "life",
+    "name": "Leben",
+    "description": "Leben schützen, Töten ablehnen; das Recht auf Leben steht über allem",
+    "examples": ["Leben zuerst retten", "Gegen die Todesstrafe", "Medizinische Hilfe", "Nicht töten"]
+  },
+  {
+    "id": "family",
+    "name": "Familie",
+    "description": "Familienbande, Verwandtschaft, Schutz der Angehörigen; Familieninteressen zuerst",
+    "examples": ["Familie schützen", "Eltern ehren", "Angehörige nicht verraten", "Familieninteressen"]
+  },
+  {
+    "id": "faith",
+    "name": "Glaube",
+    "description": "Religiöser Glaube, politische Ideale, Ideologie; sich für seinen Glauben opfern",
+    "examples": ["Religiöse Gebote", "Politische Ideale", "Revolutionäre Sache", "Am Glauben festhalten"]
+  },
+  {
+    "id": "truth",
+    "name": "Wahrheit / Wahrheitssuche",
+    "description": "Objektive Wahrheit, wissenschaftliche Fakten und historische Wahrheit verfolgen; Lügen und Falschheit ablehnen; Wahrheit über alles",
+    "examples": ["Wissenschaftliche Wahrheit suchen", "Historische Wahrheit aufdecken", "Lügen ablehnen", "An den Fakten festhalten", "Akademische Integrität"]
+  },
+  {
+    "id": "loyalty",
+    "name": "Loyalität",
+    "description": "Loyalität gegenüber Organisationen, Staat, Arbeitgebern und Freunden; niemals verraten",
+    "examples": ["Geheimnisse wahren", "Befehle befolgen", "Nicht verraten", "Auf seinem Posten bleiben"]
+  },
+  {
+    "id": "safety",
+    "name": "Öffentliche Sicherheit",
+    "description": "Die Öffentlichkeit vor Gefahren schützen, soziale Ordnung wahren; kollektive Sicherheit zuerst",
+    "examples": ["Seuchenbekämpfung", "Terrorismusbekämpfung", "Überwachungssysteme", "Ausnahmezustand"]
+  },
+  {
+    "id": "environment",
+    "name": "Umweltschutz",
+    "description": "Natur schützen, Umweltverschmutzung verringern, nachhaltige Entwicklung; Ökologie zuerst",
+    "examples": ["Gegen Erschließung", "Emissionen senken", "Tierschutz", "Grünes Leben"]
+  },
+  {
+    "id": "contract",
+    "name": "Vertragstreue",
+    "description": "Versprechen halten, Vereinbarungen einhalten; vertragliche Pflichten auch zu hohen Kosten erfüllen",
+    "examples": ["Verträge erfüllen", "Versprechen halten", "Geschäftliche Integrität", "Abmachungen einhalten", "Nicht vertragsbrüchig werden"]
+  }
+]

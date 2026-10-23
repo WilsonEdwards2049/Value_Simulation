@@ -1,0 +1,62 @@
+[
+  {
+    "id": "justice",
+    "name": "Justice",
+    "description": "Uphold fairness, hold wrongdoers accountable, and protect the innocent and vulnerable; the innocent should not be dragged in, even at high cost",
+    "examples": ["Expose corruption", "Protect the innocent", "Reveal the truth", "Stand against injustice", "Defend the weak"]
+  },
+  {
+    "id": "freedom",
+    "name": "Freedom",
+    "description": "The right to personal choice and the autonomy of thought and action, free from coercion by others",
+    "examples": ["Freedom of speech", "Freedom of movement", "Refuse to obey", "Pursue one's ideals"]
+  },
+  {
+    "id": "life",
+    "name": "Life",
+    "description": "Protect life and oppose killing; the right to life above all",
+    "examples": ["Save lives first", "Oppose the death penalty", "Medical aid", "Do not kill"]
+  },
+  {
+    "id": "family",
+    "name": "Family",
+    "description": "Family bonds, kinship, and protecting loved ones; family interests come first",
+    "examples": ["Protect family", "Filial piety", "Never betray a relative", "Family interests"]
+  },
+  {
+    "id": "faith",
+    "name": "Faith",
+    "description": "Religious belief, political ideals, ideology; sacrifice for one's faith",
+    "examples": ["Religious commandments", "Political ideals", "Revolutionary cause", "Hold firm to belief"]
+  },
+  {
+    "id": "truth",
+    "name": "Truth / Truth-seeking",
+    "description": "Pursue objective truth, scientific fact, and historical truth; reject lies and falsehood; truth above all",
+    "examples": ["Pursue scientific truth", "Reveal historical truth", "Reject lies", "Hold to the facts", "Academic integrity"]
+  },
+  {
+    "id": "loyalty",
+    "name": "Loyalty",
+    "description": "Loyalty to organizations, country, employers, and friends; never betray",
+    "examples": ["Keep secrets", "Obey orders", "Never betray", "Stand by one's post"]
+  },
+  {
+    "id": "safety",
+    "name": "Public Safety",
+    "description": "Protect the public from danger and maintain social order; collective safety first",
+    "examples": ["Epidemic measures", "Counterterrorism", "Surveillance systems", "States of emergency"]
+  },
+  {
+    "id": "environment",
+    "name": "Environmental Protection",
+    "description": "Protect nature, reduce pollution, sustainable development; ecology first",
+    "examples": ["Oppose development", "Cut emissions", "Animal protection", "Green living"]
+  },
+  {
+    "id": "contract",
+    "name": "Contractual Integrity",
+    "description": "Keep promises and honor agreements; fulfill contractual obligations even at high cost",
+    "examples": ["Honor contracts", "Keep promises", "Commercial integrity", "Keep agreements", "Do not breach"]
+  }
+]

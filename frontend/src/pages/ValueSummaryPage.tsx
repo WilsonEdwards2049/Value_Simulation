@@ -1,10 +1,12 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useValueStore } from '../store/valueStore'
+import { useI18n, stripMarkdownBold } from '../i18n'
 
 export default function ValueSummaryPage() {
   const navigate = useNavigate()
   const { summary, isLoading, loadSummary, reset } = useValueStore()
+  const { t } = useI18n()
 
   useEffect(() => {
     if (!summary) {
@@ -15,22 +17,27 @@ export default function ValueSummaryPage() {
   if (isLoading || !summary) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-slate-400 animate-pulse">正在生成你的价值观谱系...</div>
+        <div className="text-slate-400 animate-pulse">{t('summaryLoading')}</div>
       </div>
     )
   }
 
   const topValue = summary.ranking[0]
   const bottomValue = summary.ranking[summary.ranking.length - 1]
+  const winText = (n: number) => t(n === 1 ? 'winCountOne' : 'winCount', { n })
+  const lossText = (n: number) => t(n === 1 ? 'lossCountOne' : 'lossCount', { n })
 
   return (
     <div className="min-h-screen bg-slate-950 py-3 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-4">
-          <h1 className="text-3xl font-bold text-white mb-1">你的价值观谱系</h1>
+          <h1 className="text-3xl font-bold text-white mb-1">{t('summaryTitle')}</h1>
           <p className="text-slate-400">
-            完成了 {summary.total_comparisons} 次比较，调整了 {summary.adjustments_made} 次选择
+            {t('summarySubtitle', {
+              total: summary.total_comparisons,
+              adjustments: summary.adjustments_made,
+            })}
           </p>
         </div>
 
@@ -38,7 +45,7 @@ export default function ValueSummaryPage() {
         <div className="mb-3 p-4 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500 rounded-2xl">
           <div className="text-center mb-3">
             <div className="inline-block px-4 py-1.5 bg-indigo-500/30 rounded-full border border-indigo-400 mb-3">
-              <span className="text-indigo-300 text-sm font-semibold">最高优先级</span>
+              <span className="text-indigo-300 text-sm font-semibold">{t('topPriority')}</span>
             </div>
             <h2 className="text-3xl font-bold text-white mb-1">{topValue.value.name}</h2>
             <p className="text-slate-300 text-sm">{topValue.value.description}</p>
@@ -46,18 +53,18 @@ export default function ValueSummaryPage() {
           <div className="flex justify-center gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-emerald-400">{topValue.win_count}</div>
-              <div className="text-slate-400 text-sm">胜场</div>
+              <div className="text-slate-400 text-sm">{t('winsLabel')}</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-red-400">{topValue.loss_count}</div>
-              <div className="text-slate-400 text-sm">败场</div>
+              <div className="text-slate-400 text-sm">{t('lossesLabel')}</div>
             </div>
           </div>
         </div>
 
         {/* Ranking List */}
         <div className="mb-3 bg-slate-900 border border-slate-700 rounded-xl p-3">
-          <h3 className="text-white font-semibold text-lg mb-2">完整排序</h3>
+          <h3 className="text-white font-semibold text-lg mb-2">{t('fullRanking')}</h3>
           <div className="space-y-1.5">
             {summary.ranking.map((item) => (
               <div
@@ -73,10 +80,10 @@ export default function ValueSummaryPage() {
                 </div>
                 <div className="flex gap-3 text-sm">
                   <span className="text-emerald-400">
-                    {item.win_count}胜
+                    {winText(item.win_count)}
                   </span>
                   <span className="text-red-400">
-                    {item.loss_count}败
+                    {lossText(item.loss_count)}
                   </span>
                 </div>
               </div>
@@ -86,16 +93,16 @@ export default function ValueSummaryPage() {
 
         {/* Analysis */}
         <div className="mb-3 bg-slate-900 border border-slate-700 rounded-xl p-4">
-          <h3 className="text-white font-semibold text-lg mb-2">价值观分析</h3>
+          <h3 className="text-white font-semibold text-lg mb-2">{t('analysisTitle')}</h3>
           <p className="text-slate-300 text-base leading-relaxed whitespace-pre-line">
-            {summary.analysis}
+            {stripMarkdownBold(summary.analysis)}
           </p>
         </div>
 
         {/* Key Conflicts */}
         {summary.key_conflicts.length > 0 && (
           <div className="mb-3 bg-slate-900 border border-slate-700 rounded-xl p-4">
-            <h3 className="text-white font-semibold text-lg mb-2">关键抉择时刻</h3>
+            <h3 className="text-white font-semibold text-lg mb-2">{t('keyConflicts')}</h3>
             <div className="space-y-3">
               {summary.key_conflicts.map((conflict, idx) => (
                 <div
@@ -108,12 +115,12 @@ export default function ValueSummaryPage() {
                     </span>
                     {conflict.adjusted && (
                       <span className="px-2 py-0.5 text-xs bg-amber-900/40 text-amber-300 rounded">
-                        调整后选择
+                        {t('adjusted')}
                       </span>
                     )}
                   </div>
                   <div className="text-slate-400 text-sm">
-                    最终选择: <span className="text-indigo-400">{conflict.winner}</span>
+                    {t('finalChoice')}: <span className="text-indigo-400">{conflict.winner}</span>
                   </div>
                 </div>
               ))}
@@ -125,7 +132,7 @@ export default function ValueSummaryPage() {
         <div className="mb-3 p-4 bg-slate-900/60 border border-slate-700 rounded-xl">
           <div className="text-center">
             <div className="inline-block px-4 py-1.5 bg-slate-800 rounded-full border border-slate-600 mb-2">
-              <span className="text-slate-400 text-sm">相对优先级较低</span>
+              <span className="text-slate-400 text-sm">{t('lowerPriority')}</span>
             </div>
             <h3 className="text-2xl font-bold text-slate-300 mb-1">{bottomValue.value.name}</h3>
             <p className="text-slate-500 text-sm">{bottomValue.value.description}</p>
@@ -141,7 +148,7 @@ export default function ValueSummaryPage() {
             }}
             className="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition-all duration-200 active:scale-[0.98]"
           >
-            重新测试
+            {t('restart')}
           </button>
         </div>
       </div>

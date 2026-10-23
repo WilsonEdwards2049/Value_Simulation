@@ -1,0 +1,62 @@
+[
+  {
+    "id": "justice",
+    "name": "Justicia",
+    "description": "Defender la equidad, exigir responsabilidad a quienes hacen el mal y proteger a los inocentes y vulnerables; los inocentes no deben verse arrastrados, aunque el coste sea alto",
+    "examples": ["Denunciar la corrupción", "Proteger a los inocentes", "Revelar la verdad", "Enfrentarse a la injusticia", "Defender los derechos de los débiles"]
+  },
+  {
+    "id": "freedom",
+    "name": "Libertad",
+    "description": "El derecho a la elección personal y la autonomía del pensamiento y la acción, sin coerción ajena",
+    "examples": ["Libertad de expresión", "Libertad de movimiento", "Negarse a obedecer", "Perseguir ideales"]
+  },
+  {
+    "id": "life",
+    "name": "Vida",
+    "description": "Proteger la vida y oponerse a matar; el derecho a la vida por encima de todo",
+    "examples": ["Salvar vidas primero", "Oponerse a la pena de muerte", "Asistencia médica", "No matar"]
+  },
+  {
+    "id": "family",
+    "name": "Familia",
+    "description": "Lazos familiares, parentesco y protección de los seres queridos; los intereses de la familia primero",
+    "examples": ["Proteger a la familia", "Piedad filial", "No traicionar a un pariente", "Intereses familiares"]
+  },
+  {
+    "id": "faith",
+    "name": "Fe",
+    "description": "Creencia religiosa, ideales políticos, ideología; sacrificarse por la fe",
+    "examples": ["Preceptos religiosos", "Ideales políticos", "Causa revolucionaria", "Mantener las convicciones"]
+  },
+  {
+    "id": "truth",
+    "name": "Verdad / búsqueda de la verdad",
+    "description": "Buscar la verdad objetiva, los hechos científicos y la verdad histórica; rechazar mentiras y falsedades; la verdad por encima de todo",
+    "examples": ["Buscar la verdad científica", "Revelar la verdad histórica", "Rechazar mentiras", "Atenerse a los hechos", "Integridad académica"]
+  },
+  {
+    "id": "loyalty",
+    "name": "Lealtad",
+    "description": "Lealtad a organizaciones, al país, al empleador y a los amigos; no traicionar",
+    "examples": ["Guardar secretos", "Obedecer órdenes", "No traicionar", "Cumplir con el puesto"]
+  },
+  {
+    "id": "safety",
+    "name": "Seguridad pública",
+    "description": "Proteger al público del peligro y mantener el orden social; la seguridad colectiva primero",
+    "examples": ["Medidas epidémicas", "Antiterrorismo", "Sistemas de vigilancia", "Estado de emergencia"]
+  },
+  {
+    "id": "environment",
+    "name": "Protección ambiental",
+    "description": "Proteger la naturaleza, reducir la contaminación y lograr un desarrollo sostenible; la ecología primero",
+    "examples": ["Oponerse al desarrollo", "Reducir emisiones", "Protección animal", "Vida ecológica"]
+  },
+  {
+    "id": "contract",
+    "name": "Integridad contractual",
+    "description": "Cumplir promesas y acuerdos; cumplir las obligaciones contractuales incluso a un alto coste",
+    "examples": ["Cumplir contratos", "Mantener la palabra", "Honestidad comercial", "Respetar los acuerdos", "No incumplir"]
+  }
+]

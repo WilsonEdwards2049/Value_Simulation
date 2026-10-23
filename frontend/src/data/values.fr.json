@@ -1,0 +1,62 @@
+[
+  {
+    "id": "justice",
+    "name": "Justice",
+    "description": "Défendre l'équité, sanctionner les fautifs, protéger les innocents et les plus faibles ; les innocents ne doivent pas être entraînés, même à un coût élevé",
+    "examples": ["Dénoncer la corruption", "Protéger les innocents", "Révéler la vérité", "S'opposer à l'injustice", "Défendre les plus faibles"]
+  },
+  {
+    "id": "freedom",
+    "name": "Liberté",
+    "description": "Le droit de choisir personnellement, l'autonomie de la pensée et de l'action, sans contrainte d'autrui",
+    "examples": ["Liberté d'expression", "Liberté de circulation", "Refuser d'obéir", "Poursuivre ses idéaux"]
+  },
+  {
+    "id": "life",
+    "name": "Vie",
+    "description": "Protéger la vie, s'opposer au meurtre ; le droit à la vie prime sur tout",
+    "examples": ["Sauver des vies d'abord", "S'opposer à la peine de mort", "Secours médical", "Ne pas tuer"]
+  },
+  {
+    "id": "family",
+    "name": "Famille",
+    "description": "Liens familiaux, parenté, protection des proches ; les intérêts de la famille priment",
+    "examples": ["Protéger la famille", "Piété filiale", "Ne jamais trahir un proche", "Intérêts familiaux"]
+  },
+  {
+    "id": "faith",
+    "name": "Foi",
+    "description": "Croyance religieuse, idéaux politiques, idéologie ; se sacrifier pour sa foi",
+    "examples": ["Préceptes religieux", "Idéaux politiques", "Cause révolutionnaire", "Rester fidèle à ses convictions"]
+  },
+  {
+    "id": "truth",
+    "name": "Vérité / recherche de la vérité",
+    "description": "Rechercher la vérité objective, les faits scientifiques et la vérité historique ; rejeter les mensonges et la fausseté ; la vérité avant tout",
+    "examples": ["Rechercher la vérité scientifique", "Révéler la vérité historique", "Refuser le mensonge", "S'en tenir aux faits", "Intégrité académique"]
+  },
+  {
+    "id": "loyalty",
+    "name": "Loyauté",
+    "description": "Loyauté envers les organisations, l'État, l'employeur et les amis ; ne jamais trahir",
+    "examples": ["Garder le secret", "Obéir aux ordres", "Ne pas trahir", "Rester à son poste"]
+  },
+  {
+    "id": "safety",
+    "name": "Sécurité publique",
+    "description": "Protéger le public du danger, maintenir l'ordre social ; la sécurité collective prime",
+    "examples": ["Mesures sanitaires", "Lutte antiterroriste", "Systèmes de surveillance", "État d'urgence"]
+  },
+  {
+    "id": "environment",
+    "name": "Protection de l'environnement",
+    "description": "Protéger la nature, réduire la pollution, développement durable ; l'écologie prime",
+    "examples": ["S'opposer à l'aménagement", "Réduire les émissions", "Protection animale", "Vie écologique"]
+  },
+  {
+    "id": "contract",
+    "name": "Intégrité contractuelle",
+    "description": "Tenir ses promesses, respecter les accords ; honorer ses obligations contractuelles même à un coût élevé",
+    "examples": ["Honorer les contrats", "Tenir sa parole", "Honnêteté commerciale", "Respecter les engagements", "Ne pas rompre un contrat"]
+  }
+]

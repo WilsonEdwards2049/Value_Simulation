@@ -17,10 +17,12 @@ import {
 } from './comparisonEngine';
 import { prepareCaseForDisplay, selectChallengeCase } from './caseSelector';
 import { ApiError } from './errors';
+import { getActiveLocale, buildAnalysis } from '../i18n';
+import { engineMessage } from '../i18n/engineMessages';
 
 function requireValue(valueId: string): ValueInfo {
   const v = getValueById(valueId);
-  if (!v) throw new ApiError(400, `Invalid value ID: ${valueId}`);
+  if (!v) throw new ApiError(400, engineMessage(getActiveLocale(), 'errInvalidValue', { id: valueId }));
   return v;
 }
 
@@ -45,18 +47,18 @@ export function createValueSession(): { session: ValueSession; response: StartVa
     response: {
       game_id: gameId,
       values: getAllValues(),
-      message: '请从以下价值观中选择至少2个你认为最重要的',
+      message: engineMessage(getActiveLocale(), 'startPrompt'),
     },
   };
 }
 
 export function selectValues(session: ValueSession, selectedValues: string[]): SelectValuesResponse {
   if (session.status !== 'selecting') {
-    throw new ApiError(400, 'Game is not in selecting phase');
+    throw new ApiError(400, engineMessage(getActiveLocale(), 'errNotSelecting'));
   }
   const maxValues = getAllValues().length;
   if (selectedValues.length < 2 || selectedValues.length > maxValues) {
-    throw new ApiError(400, `Please select 2-${maxValues} values`);
+    throw new ApiError(400, engineMessage(getActiveLocale(), 'errSelectRange', { max: maxValues }));
   }
   const selectedInfos = selectedValues.map(requireValue);
 
@@ -82,18 +84,18 @@ export function selectValues(session: ValueSession, selectedValues: string[]): S
     game_id: session.game_id,
     selected_values: selectedInfos,
     total_comparisons: pairs.length,
-    message: `你选择了${selectedValues.length}个价值观，现在开始配对比较`,
+    message: engineMessage(getActiveLocale(), 'selectedStart', { count: selectedValues.length }),
   };
 }
 
 /** 第一阶段：不给案例，让玩家凭直觉选。 */
 export function getNextComparison(session: ValueSession): ComparisonResponse {
-  if (session.status === 'selecting') throw new ApiError(400, 'Please select values first');
-  if (session.status === 'ended') throw new ApiError(400, 'Game has ended');
+  if (session.status === 'selecting') throw new ApiError(400, engineMessage(getActiveLocale(), 'errNotSelecting'));
+  if (session.status === 'ended') throw new ApiError(400, engineMessage(getActiveLocale(), 'errGameEnded'));
 
   if (session.current_pair_index >= session.pairs_to_compare.length) {
     session.status = 'ended';
-    throw new ApiError(400, 'All comparisons completed');
+    throw new ApiError(400, engineMessage(getActiveLocale(), 'errAllCompleted'));
   }
 
   const [valueAId, valueBId] = session.pairs_to_compare[session.current_pair_index];
@@ -110,7 +112,7 @@ export function getNextComparison(session: ValueSession): ComparisonResponse {
     case: null,
     progress: getComparisonProgress(session),
     stage: 'initial',
-    message: '请凭直觉选择：这两个价值观中，哪个对你更重要？',
+    message: engineMessage(getActiveLocale(), 'intuition'),
   };
 }
 
@@ -124,10 +126,10 @@ export function submitChoice(
   session: ValueSession,
   winner: 'value_a' | 'value_b'
 ): SubmitChoiceResponse {
-  if (session.status !== 'comparing') throw new ApiError(400, 'Game is not in comparing phase');
-  if (!session.current_comparison) throw new ApiError(400, 'No active comparison');
+  if (session.status !== 'comparing') throw new ApiError(400, engineMessage(getActiveLocale(), 'errNotComparing'));
+  if (!session.current_comparison) throw new ApiError(400, engineMessage(getActiveLocale(), 'errNoActiveComparison'));
   if (winner !== 'value_a' && winner !== 'value_b') {
-    throw new ApiError(400, "Winner must be 'value_a' or 'value_b'");
+    throw new ApiError(400, engineMessage(getActiveLocale(), 'errInvalidWinner'));
   }
 
   const { value_a: valueAId, value_b: valueBId } = session.current_comparison;
@@ -149,10 +151,7 @@ export function submitChoice(
       session.shown_case_ids
     );
     if (!caseData) {
-      throw new ApiError(
-        500,
-        `No case with intuitive_lean=${targetLean} found for ${valueAId} vs ${valueBId}`
-      );
+      throw new ApiError(500, engineMessage(getActiveLocale(), 'errNoCase'));
     }
 
     session.shown_case_ids.push(caseData.id);
@@ -163,7 +162,7 @@ export function submitChoice(
       action: 'challenge',
       case: prepareCaseForDisplay(caseData, valueAId, valueBId),
       stage: 'first_challenge',
-      message: '让我们看一个真实案例，挑战你的选择...',
+      message: engineMessage(getActiveLocale(), 'firstChallenge'),
     };
   }
 
@@ -187,10 +186,7 @@ export function submitChoice(
       session.shown_case_ids
     );
     if (!caseData) {
-      throw new ApiError(
-        500,
-        `Second challenge: No case with lean=${targetLean} found for ${valueAId} vs ${valueBId}`
-      );
+      throw new ApiError(500, engineMessage(getActiveLocale(), 'errNoCase'));
     }
 
     session.current_stage = 'second_challenge';
@@ -202,7 +198,7 @@ export function submitChoice(
       action: 'challenge',
       case: prepareCaseForDisplay(caseData, valueAId, valueBId),
       stage: 'second_challenge',
-      message: '让我们再看一个案例，确认你的新选择...',
+      message: engineMessage(getActiveLocale(), 'secondChallenge'),
     };
   }
 
@@ -210,7 +206,7 @@ export function submitChoice(
     return confirmAndNext(session, valueAId, valueBId, winner, true);
   }
 
-  throw new ApiError(500, `Invalid stage: ${stage}`);
+  throw new ApiError(500, engineMessage(getActiveLocale(), 'errInvalidStage', { stage }));
 }
 
 function confirmAndNext(
@@ -248,7 +244,7 @@ function confirmAndNext(
       action: 'complete',
       case: null,
       stage: 'confirmed',
-      message: '所有比较已完成！正在生成你的价值观谱系...',
+      message: engineMessage(getActiveLocale(), 'allComplete'),
     };
   }
 
@@ -257,12 +253,12 @@ function confirmAndNext(
     action: 'next_comparison',
     case: null,
     stage: 'confirmed',
-    message: '比较已记录，准备下一对比较',
+    message: engineMessage(getActiveLocale(), 'recorded'),
   };
 }
 
 export function getValueSummary(session: ValueSession): ValueSummaryResponse {
-  if (session.status !== 'ended') throw new ApiError(400, 'Game not finished yet');
+  if (session.status !== 'ended') throw new ApiError(400, engineMessage(getActiveLocale(), 'errNotFinished'));
 
   const winCount: Record<string, number> = {};
   const lossCount: Record<string, number> = {};
@@ -291,30 +287,20 @@ export function getValueSummary(session: ValueSession): ValueSummaryResponse {
     adjustments_made: session.comparison_history.filter((c) => c.player_adjusted).length,
     key_conflicts: identifyKeyConflicts(session),
     analysis: generateValueAnalysis(ranking),
-    message: '你的价值观谱系已生成',
+    message: engineMessage(getActiveLocale(), 'summaryReady'),
   };
 }
-
-const TOP_VALUE_ANALYSIS: Record<string, string> = {
-  justice: '你是一个正义导向的人，重视公平、追究作恶与保护无辜，反对让无关者受到牵连，愿意为此付出代价，即使这意味着与亲人、组织或社会规范产生冲突。',
-  freedom: '你高度珍视个人自由和自主选择，倾向于抵制任何形式的强制和控制，即使这可能带来风险。',
-  family: '你把家庭和亲情放在首位，愿意为保护家人做出重大牺牲，血缘关系在你心中具有特殊地位。',
-  life: '你坚守生命神圣的原则，反对任何形式的杀戮和暴力，相信生命权高于其他一切价值。',
-  faith: '你是一个理想主义者，愿意为信仰和理念献身，即使这意味着与现实产生激烈冲突。',
-  truth: '你是一个追求真理的人，珍视客观事实和科学真相，难以接受欺骗和虚假，即使真话可能伤害他人或带来负面后果。',
-  loyalty: '你是一个重视承诺和忠诚的人，对组织、团队和朋友的忠诚在你心中占据重要位置。',
-  safety: '你是一个务实的人，认为公共安全和集体利益应该优先于个人自由和权利。',
-  environment: '你高度关注生态和环境保护，愿意为可持续发展付出经济代价。',
-  contract: '你是一个重信守诺的人，契约精神和商业诚信在你心中占据重要位置，即使履约会带来损失，你也倾向于坚守承诺。',
-};
 
 function generateValueAnalysis(ranking: ValueRankingItem[]): string {
   const top = ranking[0];
   const bottom = ranking[ranking.length - 1];
-  const intro =
-    `你的价值观体系中，**${top.value.name}**处于最高优先级，` +
-    `而**${bottom.value.name}**的优先级相对较低。\n\n`;
-  return intro + (TOP_VALUE_ANALYSIS[top.value.id] ?? '');
+  return buildAnalysis(
+    getActiveLocale(),
+    top.value.id,
+    bottom.value.id,
+    top.value.name,
+    bottom.value.name
+  );
 }
 
 function identifyKeyConflicts(session: ValueSession): ValueSummaryResponse['key_conflicts'] {

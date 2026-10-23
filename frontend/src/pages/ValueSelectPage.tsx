@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useValueStore } from '../store/valueStore'
 import type { ValueInfo } from '../types/values'
+import { useI18n } from '../i18n'
 
 export default function ValueSelectPage() {
+  const { t } = useI18n()
   const {
     availableValues,
     selectedValues,
@@ -39,7 +41,7 @@ export default function ValueSelectPage() {
   if (isLoading && availableValues.length === 0) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-slate-400 animate-pulse">正在加载...</div>
+        <div className="text-slate-400 animate-pulse">{t('loading')}</div>
       </div>
     )
   }
@@ -49,19 +51,19 @@ export default function ValueSelectPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-3">价值观排序游戏</h1>
+          <h1 className="text-4xl font-bold text-white mb-3">{t('selectTitle')}</h1>
           <p className="text-slate-400 text-lg mb-2">
-            从以下价值观中选择 <span className="text-indigo-400 font-semibold">2-{availableValues.length} 个</span>，两两 PK 进行排序
+            {t('selectSubtitle', { n: availableValues.length })}
           </p>
           <p className="text-slate-500 text-sm">
-            游戏将通过真实案例帮助你理解自己的价值观体系
+            {t('selectHint')}
           </p>
         </div>
 
         {/* Selection Count */}
         <div className="text-center mb-6">
           <div className="inline-block px-6 py-3 bg-slate-900/60 border border-slate-700 rounded-xl">
-            <span className="text-slate-400 text-sm">已选择：</span>
+            <span className="text-slate-400 text-sm">{t('selectedLabel')}</span>
             <span className={`text-2xl font-bold ml-2 ${
               canSubmit ? 'text-indigo-400' : 'text-slate-500'
             }`}>
@@ -135,7 +137,7 @@ export default function ValueSelectPage() {
               }
             `}
           >
-            {isLoading ? '正在准备...' : canSubmit ? '开始比较' : `请选择 ${2 - localSelected.length} 个价值观`}
+            {isLoading ? t('preparing') : canSubmit ? t('startCompare') : t('selectAtLeast', { n: 2 - localSelected.length })}
           </button>
         </div>
       </div>

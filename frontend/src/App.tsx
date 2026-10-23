@@ -1,5 +1,9 @@
+import { useEffect } from 'react'
 import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import { useValueStore } from './store/valueStore'
+import { useLocaleStore } from './store/localeStore'
+import { useI18n } from './i18n'
+import { getLocaleMeta } from './i18n/locales'
 import HomePage from './pages/HomePage'
 
 // Value Game Pages
@@ -13,10 +17,19 @@ export default function App() {
   const reset = useValueStore((s) => s.reset)
   const navigate = useNavigate()
   const location = useLocation()
+  const locale = useLocaleStore((s) => s.locale)
+  const { t, ui } = useI18n()
+
+  useEffect(() => {
+    if (locale) {
+      document.documentElement.lang = getLocaleMeta(locale).htmlLang
+      document.title = ui.appTitle
+    }
+  }, [locale, ui.appTitle])
 
   const returnToHome = () => {
     const gameInProgress = valueStatus === 'selecting' || valueStatus === 'comparing'
-    if (gameInProgress && !window.confirm('当前游戏进度将丢失，确定返回首页吗？')) return
+    if (gameInProgress && !window.confirm(t('returnConfirm'))) return
     reset()
     navigate('/', { replace: true })
   }
@@ -30,9 +43,8 @@ export default function App() {
           disabled={isLoading}
           className="fixed bottom-4 right-4 z-50 rounded-lg border border-slate-600 bg-slate-800/90 px-4 py-2 text-sm text-slate-300 shadow-lg backdrop-blur transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          返回初始页
-        </button>
-      )}
+          {t('returnToHome')}
+        </button>      )}
       <Routes>
       {/* Home Page */}
       <Route path="/" element={<HomePage />} />

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useValueStore } from '../store/valueStore'
+import { useI18n } from '../i18n'
 
 export default function ValueComparePage() {
+  const { t } = useI18n()
   const { currentComparison, isLoading, submitChoice } = useValueStore()
   const [selectedChoice, setSelectedChoice] = useState<'value_a' | 'value_b' | null>(null)
 
@@ -13,7 +15,7 @@ export default function ValueComparePage() {
   if (!currentComparison) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <div className="text-slate-400 animate-pulse">正在加载...</div>
+        <div className="text-slate-400 animate-pulse">{t('loading')}</div>
       </div>
     )
   }
@@ -38,13 +40,13 @@ export default function ValueComparePage() {
           {/* Progress Header */}
           <div className="mb-8 flex items-center justify-between">
             <div>
-              <h2 className="text-slate-400 text-xl mb-1">第一步：凭直觉选择</h2>
+              <h2 className="text-slate-400 text-xl mb-1">{t('stepInitial')}</h2>
               <h1 className="text-5xl font-bold text-white">
                 {value_a.name} vs {value_b.name}
               </h1>
             </div>
             <div className="text-right">
-              <div className="text-slate-400 text-xl mb-1">进度</div>
+              <div className="text-slate-400 text-xl mb-1">{t('progress')}</div>
               <div className="text-xl font-bold text-indigo-400">
                 {progress.completed}/{progress.total}
               </div>
@@ -59,10 +61,10 @@ export default function ValueComparePage() {
 
           <div className="mb-6 p-4 bg-indigo-900/30 border border-indigo-700/50 rounded-lg">
             <p className="text-indigo-300 text-xl">
-              💭 请凭你的直觉选择：这两个价值观中，哪个对你更重要？
+              {t('intuitionTitle')}
             </p>
             <p className="text-indigo-400/70 text-lg mt-2">
-              不要过度思考，跟随你的第一感觉。接下来我们会用真实案例挑战你的选择。
+              {t('intuitionHint')}
             </p>
           </div>
 
@@ -132,7 +134,7 @@ export default function ValueComparePage() {
                 }
               `}
             >
-              {isLoading ? '正在处理...' : '确认选择'}
+              {isLoading ? t('processing') : t('confirmChoice')}
             </button>
           </div>
         </div>
@@ -152,14 +154,14 @@ export default function ValueComparePage() {
           <div className="mb-3 flex items-center justify-between">
             <div>
               <h2 className="text-slate-400 text-base mb-1">
-                {isSecondChallenge ? '第三步：再次确认' : '第二步：案例挑战'}
+                {isSecondChallenge ? t('stepConfirm') : t('stepChallenge')}
               </h2>
               <h1 className="text-3xl font-bold text-white">
                 {value_a.name} vs {value_b.name}
               </h1>
             </div>
             <div className="text-right">
-              <div className="text-slate-400 text-base mb-1">进度</div>
+              <div className="text-slate-400 text-base mb-1">{t('progress')}</div>
               <div className="text-lg font-bold text-indigo-400">
                 {progress.completed}/{progress.total}
               </div>
@@ -175,7 +177,9 @@ export default function ValueComparePage() {
           {/* Challenge Notice */}
           <div className="mb-3 p-3 bg-amber-900/30 border border-amber-700/50 rounded-lg">
             <p className="text-amber-300 text-base">
-              ⚡ {isSecondChallenge ? '让我们再看一个真实案例，确认你的新选择...' : `你选择了 ${chosenValue.name}。现在让我们用一个真实案例挑战你的选择...`}
+              ⚡ {isSecondChallenge
+                ? t('secondChallengeNotice')
+                : t('challengeAfterChoice', { value: chosenValue.name })}
             </p>
           </div>
 
@@ -188,32 +192,32 @@ export default function ValueComparePage() {
                   <h2 className="text-3xl font-bold text-white mb-1">{caseInfo.title}</h2>
                   <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-400 text-base">
                     <span>👤 {caseInfo.real_person}</span>
-                    <span>📅 {caseInfo.year}年</span>
+                    <span>📅 {caseInfo.year}{t('yearSuffix')}</span>
                     <span>📍 {caseInfo.location}</span>
                   </div>
                 </div>
 
                 {/* Context */}
                 <div className="mb-3 xl:col-span-2">
-                  <h3 className="text-indigo-400 font-semibold mb-1">历史背景</h3>
+                  <h3 className="text-indigo-400 font-semibold mb-1">{t('labelBackground')}</h3>
                   <p className="text-slate-300 text-base leading-relaxed">{caseInfo.context}</p>
                 </div>
 
                 {/* Dilemma */}
                 <div className="mb-3 p-3 bg-slate-800/60 rounded-lg border-l-4 border-amber-500">
-                  <h3 className="text-amber-400 font-semibold mb-1">核心困境</h3>
+                  <h3 className="text-amber-400 font-semibold mb-1">{t('labelDilemma')}</h3>
                   <p className="text-slate-300 text-base leading-relaxed">{caseInfo.dilemma}</p>
                 </div>
 
                 {/* Actual Choice */}
                 <div className="mb-3">
-                  <h3 className="text-emerald-400 font-semibold mb-1">真实选择</h3>
+                  <h3 className="text-emerald-400 font-semibold mb-1">{t('labelActualChoice')}</h3>
                   <p className="text-slate-300 text-base leading-relaxed">{caseInfo.actual_choice}</p>
                 </div>
 
                 {/* Consequences */}
                 <div className="mb-3">
-                  <h3 className="text-red-400 font-semibold mb-1">后果</h3>
+                  <h3 className="text-red-400 font-semibold mb-1">{t('labelConsequences')}</h3>
                   <p className="text-slate-300 text-base leading-relaxed">{caseInfo.consequences}</p>
                 </div>
 
@@ -226,7 +230,7 @@ export default function ValueComparePage() {
 
             {/* Choice Buttons */}
               <div className="mb-4 bg-slate-900 border border-slate-700 rounded-xl p-4">
-                <h3 className="text-white font-semibold mb-3">读完这个真实案例后，你的选择是？</h3>
+                <h3 className="text-white font-semibold mb-3">{t('afterCaseQuestion')}</h3>
                 <div className="space-y-2">
                   <button
                     onClick={() => handleChoiceSelect('value_a')}
@@ -297,7 +301,7 @@ export default function ValueComparePage() {
                     }
                   `}
                 >
-                  {isLoading ? '正在处理...' : '确认选择'}
+                  {isLoading ? t('processing') : t('confirmChoice')}
                 </button>
               </div>
           </div>
