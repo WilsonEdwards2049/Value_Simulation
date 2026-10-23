@@ -89,7 +89,7 @@ const zhCN: UIStrings = {
   selectedLabel: '已选择：',
   preparing: '正在准备...',
   startCompare: '开始比较',
-  selectAtLeast: '请选择 {n} 个价值观',
+  selectAtLeast: '至少还需选择 {n} 个价值观',
 
   progress: '进度',
   stepInitial: '第一步：凭直觉选择',
@@ -178,7 +178,7 @@ const zhTW: UIStrings = {
   selectedLabel: '已選擇：',
   preparing: '正在準備...',
   startCompare: '開始比較',
-  selectAtLeast: '請選擇 {n} 個價值觀',
+  selectAtLeast: '至少還需選擇 {n} 個價值觀',
 
   progress: '進度',
   stepInitial: '第一步：憑直覺選擇',
