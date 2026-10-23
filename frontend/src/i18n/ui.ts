@@ -3,6 +3,7 @@ import type { Locale } from './locales'
 export interface UIStrings {
   appTitle: string
   homeSubtitle: string
+  homeQuestion: string
   homeGameTitle: string
   homeGameDesc: string
   homeBullet1: string
@@ -68,7 +69,8 @@ export interface UIStrings {
 
 const zhCN: UIStrings = {
   appTitle: '价值观模拟器',
-  homeSubtitle: '通过案例情境探索你的价值观体系',
+  homeSubtitle: '很多人都相信自己的价值观足够坚定，直到现实逼着他们付出代价。',
+  homeQuestion: '你自以为坚定的价值观，是否经得起现实困境的挑战？',
   homeGameTitle: '价值观排序游戏',
   homeGameDesc: '从 {n} 个核心价值中选择至少 2 个，通过案例中的艰难抉择，发现你内心真正的价值观排序',
   homeBullet1: '借鉴现实议题的道德困境',
@@ -157,7 +159,8 @@ const zhCN: UIStrings = {
 const zhTW: UIStrings = {
   ...zhCN,
   appTitle: '價值觀模擬器',
-  homeSubtitle: '透過案例情境探索你的價值觀體系',
+  homeSubtitle: '很多人都相信自己的價值觀足夠堅定，直到現實逼著他們付出代價。',
+  homeQuestion: '你自以為堅定的價值觀，是否經得起現實困境的挑戰？',
   homeGameTitle: '價值觀排序遊戲',
   homeGameDesc: '從 {n} 個核心價值中選擇至少 2 個，透過案例中的艱難抉擇，發現你內心真正的價值觀排序',
   homeBullet1: '借鑑現實議題的道德困境',
@@ -244,7 +247,8 @@ const zhTW: UIStrings = {
 
 const en: UIStrings = {
   appTitle: 'Values Simulator',
-  homeSubtitle: 'Explore your value system through real-world dilemmas',
+  homeSubtitle: 'Many of us believe our values are firm, until reality demands a price for them.',
+  homeQuestion: 'Will your values hold when a real dilemma puts them to the test?',
   homeGameTitle: 'Value Ranking Game',
   homeGameDesc:
     'Choose at least 2 of {n} core values and rank them through difficult choices in real cases',
@@ -333,7 +337,8 @@ const en: UIStrings = {
 
 const de: UIStrings = {
   appTitle: 'Werte-Simulator',
-  homeSubtitle: 'Erkunde dein Wertesystem anhand realer Dilemmata',
+  homeSubtitle: 'Viele glauben, ihre Werte seien fest, bis die Wirklichkeit einen Preis dafür verlangt.',
+  homeQuestion: 'Halten deine Werte einem echten Dilemma stand?',
   homeGameTitle: 'Werte-Ranking-Spiel',
   homeGameDesc:
     'Wähle mindestens 2 von {n} Kernwerten und ordne sie durch schwierige Entscheidungen in echten Fällen',
@@ -421,7 +426,8 @@ const de: UIStrings = {
 
 const ja: UIStrings = {
   appTitle: '価値観シミュレーター',
-  homeSubtitle: '実際の事例を通して自分の価値観体系を探る',
+  homeSubtitle: '自分の価値観は揺るがない。そう信じている人は少なくありません。',
+  homeQuestion: 'しかし、現実のジレンマが代償を求めたとき、その価値観は本当に耐えられるでしょうか。',
   homeGameTitle: '価値観ランキングゲーム',
   homeGameDesc: '{n} の核心的価値から少なくとも 2 つを選び、実際の事例の難しい選択を通して本当の価値観の順位を見つけましょう',
   homeBullet1: '現実の課題から生まれた道徳的ジレンマ',
@@ -508,7 +514,8 @@ const ja: UIStrings = {
 
 const fr: UIStrings = {
   appTitle: 'Simulateur de valeurs',
-  homeSubtitle: 'Explorez votre système de valeurs à travers des dilemmes réels',
+  homeSubtitle: "Beaucoup pensent que leurs valeurs sont inébranlables, jusqu'à ce que le réel leur impose un prix.",
+  homeQuestion: 'Les vôtres résisteront-elles à un véritable dilemme ?',
   homeGameTitle: 'Jeu de classement des valeurs',
   homeGameDesc:
     'Choisissez au moins 2 des {n} valeurs essentielles et classez-les à travers des choix difficiles issus de cas réels',
@@ -596,7 +603,8 @@ const fr: UIStrings = {
 
 const ko: UIStrings = {
   appTitle: '가치관 시뮬레이터',
-  homeSubtitle: '실제 사례 속 딜레마를 통해 나의 가치관 체계를 탐구하세요',
+  homeSubtitle: '많은 사람이 자신의 가치관은 확고하다고 믿습니다.',
+  homeQuestion: '하지만 현실이 대가를 요구할 때, 그 가치관은 과연 견딜 수 있을까요?',
   homeGameTitle: '가치관 순위 게임',
   homeGameDesc: '{n}개의 핵심 가치 중 최소 2개를 선택하고, 실제 사례의 어려운 선택을 통해 진정한 가치관 순위를 발견하세요',
   homeBullet1: '현실의 쟁점에서 가져온 도덕적 딜레마',
@@ -683,7 +691,8 @@ const ko: UIStrings = {
 
 const es: UIStrings = {
   appTitle: 'Simulador de valores',
-  homeSubtitle: 'Explora tu sistema de valores a través de dilemas reales',
+  homeSubtitle: 'Muchos creemos que nuestros valores son firmes, hasta que la realidad nos exige un precio.',
+  homeQuestion: '¿Resistirán los tuyos ante un verdadero dilema?',
   homeGameTitle: 'Juego de clasificación de valores',
   homeGameDesc:
     'Elige al menos 2 de los {n} valores fundamentales y ordénalos mediante decisiones difíciles en casos reales',

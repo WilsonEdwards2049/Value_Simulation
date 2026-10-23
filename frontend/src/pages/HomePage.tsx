@@ -34,7 +34,8 @@ export default function HomePage() {
 
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4">{t('appTitle')}</h1>
-          <p className="text-slate-400 text-lg">{t('homeSubtitle')}</p>
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">{t('homeSubtitle')}</p>
+          <p className="mt-2 text-indigo-300 text-lg font-medium max-w-2xl mx-auto">{t('homeQuestion')}</p>
         </div>
 
         <div className="max-w-md mx-auto">
