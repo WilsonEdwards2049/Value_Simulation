@@ -1,6 +1,7 @@
 import type { ValueSummaryResponse } from '../types/values'
 import { format, useI18n } from '../i18n'
 import { PROFILE } from '../i18n/profile'
+import { VALUE_TYPES } from '../i18n/profile/valueTypes'
 import { deriveProfile } from '../engine/profile'
 import { getValueById } from '../engine/data'
 import ValueRadar, { type RadarDatum } from './ValueRadar'
@@ -18,6 +19,8 @@ export default function ValueProfile({ summary }: ValueProfileProps) {
   if (!profile.topId) return null
 
   const archetype = copy.archetypes[profile.topId]
+  const typeContent = VALUE_TYPES[locale]
+  const typeCopy = profile.pairId ? typeContent.types[profile.pairId] : null
   const secondValue = profile.secondId ? getValueById(profile.secondId) : undefined
   const secondName =
     secondValue?.name ?? (profile.secondId ? copy.radarLabels[profile.secondId] : '')
@@ -44,10 +47,19 @@ export default function ValueProfile({ summary }: ValueProfileProps) {
       <div className="mb-3 p-4 bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border-2 border-indigo-500 rounded-2xl">
         <div className="text-center">
           <div className="inline-block px-4 py-1.5 bg-indigo-500/30 rounded-full border border-indigo-400 mb-3">
-            <span className="text-indigo-300 text-sm font-semibold">{copy.archetypeLabel}</span>
+            <span className="text-indigo-300 text-sm font-semibold">
+              {typeCopy ? typeContent.label : copy.archetypeLabel}
+            </span>
           </div>
-          <h3 className="text-3xl font-bold text-white mb-1">{archetype.name}</h3>
-          <p className="text-indigo-200 text-sm mb-2">{archetype.tagline}</p>
+          <h3 className="text-3xl font-bold text-white mb-1 leading-tight break-words text-balance">
+            {typeCopy ? typeCopy.name : archetype.name}
+          </h3>
+          <p className="text-indigo-200 text-sm mb-2">{typeCopy ? typeCopy.tagline : archetype.tagline}</p>
+          {typeCopy && (
+            <span className="inline-block mb-2 px-3 py-1 text-xs bg-slate-950/40 text-indigo-300 rounded-full border border-indigo-500/40">
+              {copy.archetypeLabel} · {archetype.name}
+            </span>
+          )}
           <p className="text-slate-300 text-sm leading-relaxed max-w-2xl mx-auto">
             {archetype.description}
           </p>

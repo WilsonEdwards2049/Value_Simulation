@@ -91,6 +91,16 @@ export interface CharacterContent {
   characters: Record<PairId, CharacterCopy>
 }
 
+export interface ValueTypeCopy {
+  name: string
+  tagline: string
+}
+
+export interface ValueTypeContent {
+  label: string
+  types: Record<PairId, ValueTypeCopy>
+}
+
 export type AdjustmentLevel = 'firm' | 'adaptive' | 'flexible'
 
 export interface ArchetypeCopy {
