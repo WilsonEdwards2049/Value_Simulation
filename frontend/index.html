@@ -8,5 +8,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <script>
+      // 只在线上 http(s) 环境上报，避免本地开发与单文件版触发统计请求。
+      if (location.protocol === "https:" || (location.protocol === "http:" && !/^(localhost|127\.0\.0\.1)$/.test(location.hostname))) {
+        const beacon = document.createElement("script");
+        beacon.type = "module";
+        beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        beacon.setAttribute("data-cf-beacon", '{"token": "4392f23772014ba89962b02942b6692b"}');
+        document.body.appendChild(beacon);
+      }
+    </script>
+</body>
 </html>
