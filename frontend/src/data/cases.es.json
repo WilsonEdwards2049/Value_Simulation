@@ -1025,19 +1025,19 @@
     ],
     "direction": "environment_over_freedom",
     "intuitive_lean": "environment",
-    "title": "La moratoria del bacalao de Terranova",
-    "real_person": "John Crosbie (ministro de Pesca de Canadá)",
-    "year": 1992,
-    "location": "Terranova, Canadá",
-    "context": "Los Grandes Bancos de Terranova fueron una de las zonas pesqueras más ricas del mundo, y el bacalao sostuvo la región durante más de quinientos años. En la segunda mitad del siglo XX, los grandes arrastreros y las técnicas de pesca cada vez más eficaces hicieron desplomarse las poblaciones. En 1992, los científicos advirtieron de que la población de bacalao del norte había caído a alrededor del 1 % de su nivel de los años 1980; sin una paralización total de la pesca, la población se derrumbaría de forma permanente. Pero una moratoria significaba que decenas de miles de pescadores y trabajadores de las plantas perderían su empleo de la noche a la mañana.",
-    "dilemma": "¿Debería el gobierno imponer de inmediato una moratoria total para salvar la población de bacalao en colapso, o permitir que los pescadores siguieran faenando para conservar los empleos y las comunidades que dependían de ella?",
-    "actual_choice": "El 2 de julio de 1992, el ministro de Pesca de Canadá, John Crosbie, anunció una moratoria sobre el bacalao del norte. El gobierno esperaba que durara unos dos años; se prolongó durante décadas. Más de treinta mil personas en Terranova perdieron su empleo y unas cincuenta mil abandonaron la región.",
-    "consequences": "La moratoria salvó la población de bacalao restante, pero el recurso todavía no se ha recuperado. Solo en 2024 Canadá permitió reanudar una pesquería comercial limitada, y el bacalao sigue siendo escaso en algunas aguas. Los pueblos pesqueros de Terranova perdieron gran parte de su población, y una cultura pesquera transmitida de generación en generación se rompió. Los pescadores dijeron que el gobierno había destruido sus vidas; los científicos dijeron que un paso más y no habría quedado nada.",
-    "choice_support_a": "Contra la moratoria: los pescadores tienen derecho a vivir del mar, y una prohibición total dejaría a comunidades enteras sin trabajo de la noche a la mañana. Hay que limitar la pesca, no prohibirla (Libertad > Protección ambiental).",
-    "choice_support_b": "A favor de la moratoria: la población de bacalao había caído a alrededor del 1 % de su nivel de los años 1980. Sin prohibición, la población y la pesquería desaparecerían por completo, y las generaciones futuras no tendrían nada que pescar (Protección ambiental > Libertad).",
-    "reflection": "Si una prohibición de pesca pudiera salvar una especie pero costara a decenas de miles de personas el oficio de sus antepasados, ¿qué elegirías?",
-    "impact_score": 9.5,
-    "controversy_level": 7.5
+    "title": "La prohibición del carbón crudo en Ulán Bator",
+    "real_person": "Gobierno de Mongolia",
+    "year": 2019,
+    "location": "Ulán Bator, Mongolia",
+    "context": "Ulán Bator es la capital más fría del mundo. Los barrios de gers de la periferia no tienen calefacción central, y unas 200.000 familias queman carbón crudo durante el largo invierno. El humo queda atrapado en la inversión térmica del valle; cerca del 80 % de la niebla tóxica invernal proviene de estos hogares. Los niveles de PM2,5 llegaron a superar cien veces las directrices de la OMS, y las neumonías y la pérdida de función pulmonar infantil se dispararon. En mayo de 2019, el gobierno prohibió el carbón crudo en la ciudad y exigió el cambio a briquetas subvencionadas.",
+    "dilemma": "¿Debe el gobierno prohibir el combustible más barato que las familias pobres pueden pagar para salvar el aire de la ciudad, o respetar su derecho a elegir cómo calentarse y evitar que los pobres carguen con el coste de la protección ambiental?",
+    "actual_choice": "El 15 de mayo de 2019, Ulán Bator prohibió el carbón crudo, promovió las briquetas y concedió subvenciones. El aire mejoró el primer año, pero las briquetas eran más caras; algunas familias pasaron a quemar caucho, basura o madera talada ilegalmente. Las briquetas también necesitan más oxígeno, y su uso incorrecto provocó un aumento de las intoxicaciones por monóxido de carbono. De 2019 a 2022, los distritos afectados registraron 91 muertes y 1.633 intoxicaciones no mortales.",
+    "consequences": "La prohibición redujo algo la niebla tóxica invernal, pero la calidad del aire sigue muy por encima de las normas mongolas y de la OMS. Las familias pobres dedican una gran parte de sus ingresos a la calefacción; las más pobres pueden gastar más del 40 % de sus ingresos en energía durante el invierno. Algunas, para ahorrar, acabaron quemando combustibles más sucios. El aire limpio se convirtió en un bien que solo podían permitirse quienes podían pagarlo, dejando al gobierno atrapado entre la protección ambiental y la pobreza.",
+    "choice_support_a": "Contra la prohibición: los pobres tienen derecho a elegir una calefacción que puedan pagar; el Estado no debe dejar que las familias más pobres se congelen por el aire de la ciudad. Hay que subvencionar combustible limpio en vez de prohibir el carbón sin más (libertad > medio ambiente)",
+    "choice_support_b": "A favor de la prohibición: el humo del carbón provoca neumonías y daña los pulmones de los niños de la ciudad; la libertad de calentarse no puede ir en contra de la salud de los demás. El Estado debe reducir la contaminación por la fuerza (medio ambiente > libertad)",
+    "reflection": "Si el aire limpio significa que los pobres deben pagar un precio que no pueden permitirse, ¿debería el gobierno imponerlo igualmente?",
+    "impact_score": 9,
+    "controversy_level": 8
   },
   {
     "id": "case_056",
@@ -2270,5 +2270,27 @@
     "reflection": "Si escribir con veracidad cinco caracteres pudiera hacer que te maten, y cambiar unas pocas palabras pudiera salvarte la vida, ¿cómo lo escribirías?",
     "impact_score": 9,
     "controversy_level": 5
+  },
+  {
+    "id": "case_125",
+    "value_pair": [
+      "freedom",
+      "environment"
+    ],
+    "direction": "environment_over_freedom",
+    "intuitive_lean": "environment",
+    "title": "Venecia prohíbe los grandes cruceros",
+    "real_person": "Gobierno de Italia",
+    "year": 2021,
+    "location": "Venecia, Italia",
+    "context": "Venecia está construida sobre pilotes de madera en una laguna, y los grandes cruceros han pasado durante años frente a la plaza de San Marcos por el canal de la Giudecca. Los opositores dicen que las olas de los barcos erosionan los cimientos, mientras que las emisiones y las perturbaciones dañan el ecosistema de la laguna; Venecia ha corrido varias veces el riesgo de entrar en la lista de patrimonio en peligro de la UNESCO. Pero el puerto de cruceros y los negocios relacionados mantienen a unos 5.000 trabajadores, y la pandemia ya había paralizado el turismo durante más de un año.",
+    "dilemma": "¿Debe Italia prohibir los grandes cruceros en el centro de Venecia para proteger la laguna y la ciudad histórica, o preservar la industria de cruceros y los empleos portuarios y dejar que los visitantes sigan llegando por mar?",
+    "actual_choice": "En julio de 2021, el gobierno italiano anunció que a partir del 1 de agosto quedarían prohibidos en la cuenca de San Marcos y el canal de la Giudecca los cruceros de más de 25.000 toneladas, más de 180 metros de eslora, más de 35 metros de altura o que usaran combustible con alto contenido de azufre. Los grandes barcos se desviaron temporalmente al puerto industrial de Marghera; el gobierno destinó 157 millones de euros y prometió amortiguar el impacto sobre el empleo.",
+    "consequences": "El movimiento contra los cruceros lo calificó de victoria histórica, y la laguna y los cimientos de la ciudad perdieron una fuente directa de presión. Pero los trabajadores portuarios y las navieras protestaron: la prohibición, tras la pandemia, había destruido toda una cadena industrial; un político regional estimó al menos 100 millones de euros de pérdidas en cinco años. Con los barcos desviados al puerto industrial, los turistas aún podían llegar a Venecia, pero la contaminación y la masificación del turismo de cruceros no desaparecieron.",
+    "choice_support_a": "Contra la prohibición: los cruceros y el puerto mantienen a miles de familias, y los visitantes tienen derecho a llegar a Venecia por mar. Hay que limitar la velocidad, desviar barcos o cobrar tasas en lugar de borrar toda una industria (libertad > medio ambiente)",
+    "choice_support_b": "A favor de la prohibición: los grandes cruceros erosionan los cimientos de Venecia y dañan la laguna; una vez destruida, esta ciudad no se puede restaurar. Ningún ingreso turístico puede comprar de vuelta una Venecia viva (medio ambiente > libertad)",
+    "reflection": "Si la supervivencia de una ciudad depende de una forma de turismo que la daña, ¿hay que salvar primero la ciudad o primero los empleos?",
+    "impact_score": 8.5,
+    "controversy_level": 7.5
   }
 ]

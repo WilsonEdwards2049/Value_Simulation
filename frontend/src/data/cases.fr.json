@@ -1025,19 +1025,19 @@
     ],
     "direction": "environment_over_freedom",
     "intuitive_lean": "environment",
-    "title": "Le moratoire sur la morue de Terre-Neuve",
-    "real_person": "John Crosbie (ministre canadien des Pêches)",
-    "year": 1992,
-    "location": "Terre-Neuve, Canada",
-    "context": "Les Grands Bancs de Terre-Neuve étaient autrefois l’une des zones de pêche les plus riches du monde, et la morue faisait vivre la région depuis plus de cinq cents ans. Dans la seconde moitié du XXe siècle, les grands chalutiers et des techniques de pêche toujours plus efficaces ont fait chuter les stocks. En 1992, les scientifiques ont averti que le stock de morue du Nord était tombé à environ 1 % de son niveau des années 1980 ; sans un arrêt complet de la pêche, la population s’effondrerait définitivement. Mais un moratoire signifiait que des dizaines de milliers de pêcheurs et d’ouvriers d’usine perdraient leur emploi du jour au lendemain.",
-    "dilemma": "Faut-il imposer immédiatement un moratoire complet pour sauver le stock de morue en train de s’effondrer, ou laisser les pêcheurs continuer à pêcher afin de préserver les emplois et les communautés qui en dépendaient ?",
-    "actual_choice": "Le 2 juillet 1992, le ministre canadien des Pêches, John Crosbie, a annoncé un moratoire sur la morue du Nord. Le gouvernement pensait qu’il durerait environ deux ans ; il a duré des décennies. Plus de trente mille personnes à Terre-Neuve ont perdu leur emploi, et environ cinquante mille ont quitté la région.",
-    "consequences": "Le moratoire a sauvé le stock de morue restant, mais la ressource ne s’est toujours pas rétablie. Ce n’est qu’en 2024 que le Canada a autorisé une reprise limitée de la pêche commerciale, et la morue reste rare dans certaines eaux. Les villages de pêcheurs de Terre-Neuve ont perdu une grande partie de leur population, et une culture de la pêche transmise de génération en génération s’est brisée. Les pêcheurs ont dit que le gouvernement avait détruit leur vie ; les scientifiques ont dit qu’un pas de plus et il ne resterait plus rien.",
-    "choice_support_a": "Contre le moratoire : les pêcheurs ont le droit de vivre de la mer, et une interdiction totale jetterait des communautés entières au chômage du jour au lendemain. Il faut limiter la pêche, pas l’interdire (Liberté > Protection de l’environnement).",
-    "choice_support_b": "Pour le moratoire : le stock de morue était tombé à environ 1 % de son niveau des années 1980. Sans interdiction, la population et la pêche disparaîtraient entièrement, ne laissant rien à pêcher aux générations futures (Protection de l’environnement > Liberté).",
-    "reflection": "Si une interdiction de pêche pouvait sauver une espèce mais coûtait à des dizaines de milliers de personnes le métier de leurs ancêtres, que choisirais-tu ?",
-    "impact_score": 9.5,
-    "controversy_level": 7.5
+    "title": "L'interdiction du charbon brut à Oulan-Bator",
+    "real_person": "Gouvernement mongol",
+    "year": 2019,
+    "location": "Oulan-Bator, Mongolie",
+    "context": "Oulan-Bator est la capitale la plus froide du monde. Les quartiers de yourtes à la périphérie n'ont pas de chauffage central, et environ 200 000 foyers brûlent du charbon brut pendant le long hiver. La fumée est piégée par l'inversion de température de la vallée ; environ 80 % du smog hivernal provient de ces foyers. Les niveaux de PM2,5 ont atteint plus de 100 fois les recommandations de l'OMS, et les pneumonies ainsi que la baisse de la fonction pulmonaire chez les enfants ont explosé. En mai 2019, le gouvernement a interdit le charbon brut dans la ville et exigé le passage à des briquettes subventionnées.",
+    "dilemma": "Faut-il interdire le combustible le moins cher que les familles pauvres puissent s'offrir pour sauver l'air de la ville, ou respecter leur droit de choisir comment se chauffer et éviter de faire porter aux pauvres le coût de la protection de l'environnement ?",
+    "actual_choice": "Le 15 mai 2019, Oulan-Bator a interdit le charbon brut, promu les briquettes et accordé des subventions. L'air s'est amélioré la première année, mais les briquettes coûtaient plus cher ; certaines familles se sont mises à brûler du caoutchouc, des déchets ou du bois coupé illégalement. Les briquettes demandent aussi plus d'oxygène, et leur mauvaise utilisation a provoqué une explosion des intoxications au monoxyde de carbone. De 2019 à 2022, les districts concernés ont signalé 91 décès et 1 633 intoxications non mortelles.",
+    "consequences": "L'interdiction a un peu réduit le smog hivernal, mais la qualité de l'air reste bien au-delà des normes mongoles et de l'OMS. Les ménages pauvres consacrent une grande part de leur revenu au chauffage ; les plus pauvres peuvent y consacrer plus de 40 % de leur revenu en hiver. Certains, pour économiser, ont fini par brûler des combustibles plus sales. L'air pur est devenu un bien que seuls ceux qui pouvaient payer pouvaient s'offrir, laissant le gouvernement pris entre protection de l'environnement et pauvreté.",
+    "choice_support_a": "Contre l'interdiction : les pauvres ont le droit de choisir un chauffage qu'ils peuvent se permettre ; l'État ne doit pas laisser les familles les plus pauvres geler pour l'air de la ville. Il faut subventionner un combustible propre plutôt que d'interdire le charbon (liberté > environnement)",
+    "choice_support_b": "Pour l'interdiction : la fumée du charbon donne des pneumonies et abîme les poumons des enfants de la ville ; la liberté de se chauffer ne peut pas se faire au détriment de la santé des autres. L'État doit réduire la pollution par la contrainte (environnement > liberté)",
+    "reflection": "Si l'air pur signifie que les pauvres doivent payer un prix qu'ils ne peuvent pas assumer, l'État doit-il quand même l'imposer ?",
+    "impact_score": 9,
+    "controversy_level": 8
   },
   {
     "id": "case_056",
@@ -2270,5 +2270,27 @@
     "reflection": "Si écrire fidèlement cinq caractères pouvait vous faire tuer, et que changer quelques caractères pouvait vous sauver la vie, comment écririez-vous ?",
     "impact_score": 9,
     "controversy_level": 5
+  },
+  {
+    "id": "case_125",
+    "value_pair": [
+      "freedom",
+      "environment"
+    ],
+    "direction": "environment_over_freedom",
+    "intuitive_lean": "environment",
+    "title": "Venise interdit les grands navires de croisière",
+    "real_person": "Gouvernement italien",
+    "year": 2021,
+    "location": "Venise, Italie",
+    "context": "Venise est bâtie sur des pieux de bois dans une lagune, et les grands navires de croisière ont longtemps longé la place Saint-Marc par le canal de la Giudecca. Les opposants affirment que les vagues des navires érodent les fondations, tandis que les émissions et les perturbations abîment l'écosystème de la lagune ; Venise a plusieurs fois risqué d'être inscrite sur la liste du patrimoine mondial en péril de l'UNESCO. Mais le port de croisière et les activités liées font vivre environ 5 000 travailleurs, et la pandémie avait déjà paralysé le tourisme pendant plus d'un an.",
+    "dilemma": "L'Italie doit-elle interdire les grands navires de croisière au centre de Venise pour protéger la lagune et la ville historique, ou préserver l'industrie de la croisière et les emplois portuaires et laisser les visiteurs continuer d'arriver par la mer ?",
+    "actual_choice": "En juillet 2021, le gouvernement italien a annoncé qu'à partir du 1er août, les navires de plus de 25 000 tonnes, de plus de 180 mètres de long, de plus de 35 mètres de haut ou utilisant un carburant à haute teneur en soufre seraient interdits dans le bassin Saint-Marc et le canal de la Giudecca. Les grands navires ont été temporairement redirigés vers le port industriel de Marghera ; le gouvernement a alloué 157 millions d'euros et promis d'atténuer l'impact sur l'emploi.",
+    "consequences": "Le mouvement anti-croisière a parlé d'une victoire historique, et la lagune ainsi que les fondations de la ville ont perdu une source directe de pression. Mais les dockers et les croisiéristes ont protesté, affirmant que l'interdiction, après la pandémie, avait détruit toute une chaîne industrielle ; un élu régional a estimé au moins 100 millions d'euros de pertes sur cinq ans. Les navires redirigés vers le port industriel, les touristes pouvaient toujours atteindre Venise, mais la pollution et l'affluence du tourisme de croisière n'ont pas disparu.",
+    "choice_support_a": "Contre l'interdiction : les navires de croisière et le port font vivre des milliers de familles, et les visiteurs ont le droit d'arriver à Venise par la mer. Il faut limiter la vitesse, rerouter les navires ou prélever des taxes plutôt que d'effacer toute une industrie (liberté > environnement)",
+    "choice_support_b": "Pour l'interdiction : les grands navires de croisière érodent les fondations de Venise et abîment la lagune ; une fois cette ville détruite, elle ne pourra pas être restaurée. Aucun revenu touristique ne pourra racheter une Venise vivante (environnement > liberté)",
+    "reflection": "Si la survie d'une ville dépend d'une forme de tourisme qui la détruit, faut-il sauver la ville d'abord ou les emplois d'abord ?",
+    "impact_score": 8.5,
+    "controversy_level": 7.5
   }
 ]

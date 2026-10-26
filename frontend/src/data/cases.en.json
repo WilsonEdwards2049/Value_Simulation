@@ -1025,19 +1025,19 @@
     ],
     "direction": "environment_over_freedom",
     "intuitive_lean": "environment",
-    "title": "The Newfoundland Cod Moratorium",
-    "real_person": "John Crosbie (Canada's fisheries minister)",
-    "year": 1992,
-    "location": "Newfoundland, Canada",
-    "context": "The Grand Banks off Newfoundland was once one of the world’s richest fishing grounds, and cod had sustained the region for over five hundred years. In the second half of the twentieth century, large trawlers and increasingly efficient fishing technology caused cod stocks to plummet. In 1992, scientists warned that the northern cod stock had fallen to about one percent of its 1980s level; without a complete stop to fishing, the population would collapse permanently. But a moratorium meant tens of thousands of fishers and fish-plant workers would lose their jobs overnight.",
-    "dilemma": "Should the government impose an immediate, complete moratorium to save the collapsing cod stock, or allow fishers to keep fishing and preserve the jobs and communities that depended on it?",
-    "actual_choice": "On July 2, 1992, Canada’s fisheries minister John Crosbie announced a moratorium on northern cod. The government expected it to last about two years; it continued for decades. More than thirty thousand people in Newfoundland lost their jobs, and about fifty thousand left the region.",
-    "consequences": "The moratorium saved the remaining cod stock, but the resource has still not recovered. Only in 2024 did Canada allow a limited commercial fishery to resume, and cod remain scarce in some waters. Newfoundland’s fishing villages lost much of their population, and a fishing culture passed down through generations was broken. Fishers said the government had destroyed their lives; scientists said that one step later, nothing would have been left.",
-    "choice_support_a": "Oppose the moratorium: fishers have the right to make a living from the sea, and a complete ban would throw entire communities out of work overnight. Fishing should be limited, not banned outright (Freedom > Environmental Protection).",
-    "choice_support_b": "Support the moratorium: cod stocks had fallen to about one percent of their 1980s level. Without a ban, the population and the fishery would disappear entirely, leaving future generations with nothing to catch (Environmental Protection > Freedom).",
-    "reflection": "If a fishing ban could save a species but cost tens of thousands of people the livelihood their families had known for generations, what would you choose?",
-    "impact_score": 9.5,
-    "controversy_level": 7.5
+    "title": "Ulaanbaatar's Raw Coal Ban",
+    "real_person": "Government of Mongolia",
+    "year": 2019,
+    "location": "Ulaanbaatar, Mongolia",
+    "context": "Ulaanbaatar is the coldest capital in the world. The ger districts on its outskirts have no central heating, and about 200,000 households burn raw coal through the long winter. The smoke is trapped in the valley's temperature inversion; roughly 80% of winter smog comes from these households. PM2.5 levels have reached more than 100 times the WHO guideline, and childhood pneumonia and reduced lung function have surged. In May 2019, the government banned raw coal in the city and required households to switch to subsidized coal briquettes.",
+    "dilemma": "Should the government ban the cheapest fuel poor families can afford in order to save the city's air, or respect their right to choose how they keep warm and avoid making the poor bear the cost of environmental protection?",
+    "actual_choice": "On May 15, 2019, Ulaanbaatar banned raw coal, promoted briquettes, and provided subsidies. Air quality improved in the first year, but briquettes were more expensive; some families switched to burning rubber, trash, or illegally logged wood. Briquettes also need more oxygen, and improper use led to a surge in carbon monoxide poisoning. From 2019 to 2022, the ban districts reported 91 fatal and 1,633 non-fatal poisonings.",
+    "consequences": "The ban reduced winter smog somewhat, but air quality remains far above Mongolian and WHO standards. Poor households spend a large share of their income on heating; the poorest can spend more than 40% of their income on winter energy. Some, trying to save money, ended up burning dirtier fuels. Clean air became a commodity that only those who could pay could afford, leaving the government caught between environmental protection and poverty.",
+    "choice_support_a": "Oppose the ban: poor people have the right to choose heating they can afford; the government should not make the poorest families freeze for the sake of the city's air. Subsidize clean fuel instead of simply banning coal (freedom > environment)",
+    "choice_support_b": "Support the ban: coal smoke gives the city's children pneumonia and damaged lungs; one person's freedom to keep warm cannot come at the cost of others' health. The government must forcibly reduce pollution (environment > freedom)",
+    "reflection": "If clean air means the poor must pay a price they cannot afford, should the government still force it?",
+    "impact_score": 9,
+    "controversy_level": 8
   },
   {
     "id": "case_056",
@@ -2270,5 +2270,27 @@
     "reflection": "If writing five characters truthfully could get you killed, while changing a few characters could save your life, how would you write it?",
     "impact_score": 9,
     "controversy_level": 5
+  },
+  {
+    "id": "case_125",
+    "value_pair": [
+      "freedom",
+      "environment"
+    ],
+    "direction": "environment_over_freedom",
+    "intuitive_lean": "environment",
+    "title": "Venice Bans Large Cruise Ships",
+    "real_person": "Italian Government",
+    "year": 2021,
+    "location": "Venice, Italy",
+    "context": "Venice is built on wooden piles in a lagoon, and large cruise ships have long sailed past St. Mark's Square through the Giudecca Canal. Opponents say the waves from the ships keep eroding the foundations, while emissions and disturbance damage the lagoon's ecosystem; Venice has repeatedly risked being added to UNESCO's list of endangered heritage sites. But the cruise port and related businesses support about 5,000 workers, and the pandemic had already shut down tourism for more than a year.",
+    "dilemma": "Should Italy ban large cruise ships from central Venice to protect the lagoon and the historic city, or preserve the cruise industry and port workers' livelihoods and let visitors keep arriving by sea?",
+    "actual_choice": "In July 2021, the Italian government announced that from August 1, cruise ships over 25,000 tonnes, longer than 180 meters, taller than 35 meters, or burning high-sulphur fuel would be barred from St. Mark's Basin and the Giudecca Canal. Large ships were temporarily rerouted to the industrial port of Marghera, and the government allocated €157 million while promising to cushion the impact on jobs.",
+    "consequences": "The anti-cruise movement called it a historic victory, and the lagoon and the city's foundations lost a direct source of pressure. But port workers and cruise operators protested that the ban, coming after the pandemic, had destroyed an entire industry chain; a regional politician estimated at least €100 million in losses over five years. With ships rerouted to the industrial port, tourists could still reach Venice, but the pollution and crowding from cruise tourism did not disappear.",
+    "choice_support_a": "Oppose the ban: cruise ships and the port support thousands of families, and visitors have a right to arrive in Venice by sea. Regulate speed, reroute ships, or charge fees instead of wiping out an entire industry (freedom > environment)",
+    "choice_support_b": "Support the ban: large cruise ships are eroding Venice's foundations and damaging the lagoon; once this city is destroyed, it cannot be restored. No amount of tourism revenue can buy back a living Venice (environment > freedom)",
+    "reflection": "If a city's survival depends on a form of tourism that damages it, should we save the city first or the jobs first?",
+    "impact_score": 8.5,
+    "controversy_level": 7.5
   }
 ]

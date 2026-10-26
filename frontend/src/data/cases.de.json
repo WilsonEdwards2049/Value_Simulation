@@ -1025,19 +1025,19 @@
     ],
     "direction": "environment_over_freedom",
     "intuitive_lean": "environment",
-    "title": "Das Kabeljau-Moratorium in Neufundland",
-    "real_person": "John Crosbie (kanadischer Fischereiminister)",
-    "year": 1992,
-    "location": "Neufundland, Kanada",
-    "context": "Die Grand Banks vor Neufundland waren einst eines der fischreichsten Gebiete der Welt, und der Kabeljau ernährte die Region über fünfhundert Jahre lang. In der zweiten Hälfte des 20. Jahrhunderts ließen große Trawler und immer effizientere Fangtechnik die Kabeljaubestände abstürzen. 1992 warnten Wissenschaftler, der nördliche Kabeljaubestand sei auf etwa ein Prozent seines Niveaus in den 1980er-Jahren gefallen; ohne einen vollständigen Fangstopp würde die Population endgültig zusammenbrechen. Ein Moratorium bedeutete jedoch, dass Zehntausende Fischer und Fabrikarbeiter von einem Tag auf den anderen ihre Arbeit verlieren würden.",
-    "dilemma": "Sollte die Regierung sofort ein vollständiges Moratorium verhängen, um den zusammenbrechenden Kabeljaubestand zu retten, oder den Fischern erlauben, weiter zu fischen und die Arbeitsplätze und Gemeinden zu erhalten?",
-    "actual_choice": "Am 2. Juli 1992 kündigte Kanadas Fischereiminister John Crosbie ein Moratorium für den nördlichen Kabeljau an. Die Regierung rechnete mit etwa zwei Jahren; tatsächlich dauerte es Jahrzehnte. Mehr als dreißigtausend Menschen in Neufundland verloren ihre Arbeit, etwa fünfzigtausend verließen die Region.",
-    "consequences": "Das Moratorium rettete den verbliebenen Kabeljaubestand, doch die Ressource hat sich bis heute nicht erholt. Erst 2024 erlaubte Kanada eine begrenzte Wiederaufnahme der kommerziellen Fischerei, und in manchen Gewässern ist Kabeljau weiterhin selten. Die Fischerdörfer Neufundlands verloren einen Großteil ihrer Bevölkerung, und eine über Generationen weitergegebene Fischkultur brach ab. Die Fischer sagten, die Regierung habe ihr Leben zerstört; die Wissenschaftler sagten, ein weiteres Zögern hätte nichts übrig gelassen.",
-    "choice_support_a": "Gegen das Moratorium: Fischer haben das Recht, vom Meer zu leben, und ein vollständiges Verbot würde ganze Gemeinden über Nacht arbeitslos machen. Der Fang sollte begrenzt, nicht verboten werden (Freiheit > Umweltschutz).",
-    "choice_support_b": "Für das Moratorium: Der Kabeljaubestand war auf etwa ein Prozent seines Niveaus in den 1980er-Jahren gefallen. Ohne Verbot würden Population und Fischerei vollständig verschwinden, und künftige Generationen hätten nichts mehr zu fangen (Umweltschutz > Freiheit).",
-    "reflection": "Wenn ein Fangverbot eine Art retten könnte, aber Zehntausenden Menschen die Lebensgrundlage ihrer Vorfahren nehmen würde, wie würdest du entscheiden?",
-    "impact_score": 9.5,
-    "controversy_level": 7.5
+    "title": "Ulaanbaatars Rohkohleverbot",
+    "real_person": "Regierung der Mongolei",
+    "year": 2019,
+    "location": "Ulaanbaatar, Mongolei",
+    "context": "Ulaanbaatar ist die kälteste Hauptstadt der Welt. Die Jurtenviertel am Stadtrand haben keine Fernwärme; etwa 200.000 Haushalte heizen den langen Winter über mit Rohkohle. Der Rauch wird in der Temperaturinversion des Tals gefangen; rund 80 % des Wintersmogs stammen aus diesen Haushalten. Die PM2.5-Werte erreichten mehr als das Hundertfache des WHO-Richtwerts, und Lungenentzündungen sowie eingeschränkte Lungenfunktion bei Kindern nahmen stark zu. Im Mai 2019 verbot die Regierung Rohkohle in der Stadt und verlangte den Wechsel zu subventionierten Kohlebriketts.",
+    "dilemma": "Soll die Regierung den billigsten Brennstoff verbieten, den sich arme Familien leisten können, um die Luft der Stadt zu retten – oder soll sie ihr Recht respektieren, selbst zu entscheiden, wie sie sich warm halten, und vermeiden, dass die Armen die Kosten des Umweltschutzes tragen?",
+    "actual_choice": "Am 15. Mai 2019 verbot Ulaanbaatar Rohkohle, förderte Briketts und zahlte Subventionen. Die Luft verbesserte sich im ersten Jahr, aber Briketts waren teurer; manche Familien verbrannten Gummi, Müll oder illegal geschlagenes Holz. Briketts brauchen außerdem mehr Sauerstoff, und unsachgemäße Nutzung führte zu einem Anstieg von Kohlenmonoxidvergiftungen. Von 2019 bis 2022 meldeten die betroffenen Bezirke 91 tödliche und 1.633 nicht tödliche Vergiftungen.",
+    "consequences": "Das Verbot verringerte den Wintersmog etwas, doch die Luftqualität liegt weiterhin weit über den mongolischen und WHO-Standards. Arme Haushalte geben einen großen Teil ihres Einkommens für Heizung aus; die Ärmsten können über 40 % ihres Einkommens für Winterenergie aufwenden. Manche verbrannten aus Geldnot noch schmutzigere Brennstoffe. Saubere Luft wurde zu einer Ware, die sich nur Zahlungsfähige leisten konnten – die Regierung steckt zwischen Umweltschutz und Armut fest.",
+    "choice_support_a": "Gegen das Verbot: Arme Menschen haben das Recht, eine Heizung zu wählen, die sie sich leisten können; der Staat darf die ärmsten Familien nicht für die Luft der Stadt frieren lassen. Subventioniert saubere Brennstoffe, statt Kohle einfach zu verbieten (Freiheit > Umwelt)",
+    "choice_support_b": "Für das Verbot: Kohlerauch verursacht bei den Kindern der Stadt Lungenentzündungen und geschädigte Lungen; die persönliche Freiheit, sich warm zu halten, darf nicht auf Kosten der Gesundheit anderer gehen. Der Staat muss die Verschmutzung zwangsweise senken (Umwelt > Freiheit)",
+    "reflection": "Wenn saubere Luft bedeutet, dass Arme einen Preis zahlen müssen, den sie sich nicht leisten können, sollte der Staat es dann trotzdem erzwingen?",
+    "impact_score": 9,
+    "controversy_level": 8
   },
   {
     "id": "case_056",
@@ -2270,5 +2270,27 @@
     "reflection": "Wenn das wahrheitsgemäße Niederschreiben von fünf Schriftzeichen dich das Leben kosten könnte und das Ändern einiger Zeichen dich am Leben halten würde – wie würdest du schreiben?",
     "impact_score": 9,
     "controversy_level": 5
+  },
+  {
+    "id": "case_125",
+    "value_pair": [
+      "freedom",
+      "environment"
+    ],
+    "direction": "environment_over_freedom",
+    "intuitive_lean": "environment",
+    "title": "Venedig verbietet große Kreuzfahrtschiffe",
+    "real_person": "Italienische Regierung",
+    "year": 2021,
+    "location": "Venedig, Italien",
+    "context": "Venedig ist auf Holzpfählen in einer Lagune gebaut, und große Kreuzfahrtschiffe fuhren lange am Markusplatz vorbei durch den Giudecca-Kanal. Gegner sagen, die Wellen der Schiffe unterspülen die Fundamente, während Abgase und Störungen das Ökosystem der Lagune schädigen; Venedig drohte mehrfach, auf die Liste des gefährdeten UNESCO-Welterbes zu kommen. Doch der Kreuzfahrthafen und verwandte Betriebe ernähren etwa 5.000 Arbeitskräfte, und die Pandemie hatte den Tourismus bereits mehr als ein Jahr lahmgelegt.",
+    "dilemma": "Soll Italien große Kreuzfahrtschiffe aus dem Zentrum von Venedig verbannen, um die Lagune und die historische Stadt zu schützen – oder die Kreuzfahrtindustrie und die Arbeitsplätze im Hafen erhalten und Besucher weiterhin auf dem Seeweg ankommen lassen?",
+    "actual_choice": "Im Juli 2021 kündigte die italienische Regierung an, dass ab dem 1. August Kreuzfahrtschiffe mit mehr als 25.000 Tonnen, länger als 180 Meter, höher als 35 Meter oder mit schwefelreichem Treibstoff nicht mehr in das Becken von San Marco und den Giudecca-Kanal einfahren dürfen. Große Schiffe wurden vorübergehend in den Industriehafen Marghera umgeleitet; die Regierung stellte 157 Millionen Euro bereit und versprach, die Folgen für die Arbeitsplätze abzufedern.",
+    "consequences": "Die Anti-Kreuzfahrt-Bewegung nannte es einen historischen Sieg, und die Lagune und die Fundamente der Stadt verloren eine direkte Belastungsquelle. Doch Hafenarbeiter und Kreuzfahrtunternehmen protestierten, das Verbot habe nach der Pandemie eine ganze Industriekette zerstört; ein regionaler Politiker schätzte mindestens 100 Millionen Euro Verlust über fünf Jahre. Da die Schiffe in den Industriehafen umgeleitet wurden, konnten Touristen Venedig weiterhin erreichen, aber die Verschmutzung und Überfüllung durch den Kreuzfahrttourismus verschwanden nicht.",
+    "choice_support_a": "Gegen das Verbot: Kreuzfahrtschiffe und der Hafen ernähren Tausende Familien, und Besucher haben das Recht, Venedig auf dem Seeweg zu erreichen. Begrenzt die Geschwindigkeit, leitet Schiffe um oder erhebt Gebühren, statt eine ganze Industrie auszulöschen (Freiheit > Umwelt)",
+    "choice_support_b": "Für das Verbot: Große Kreuzfahrtschiffe unterspülen die Fundamente Venedigs und schädigen die Lagune; ist diese Stadt erst zerstört, lässt sie sich nicht wiederherstellen. Keine Tourismuseinnahme kann ein lebendiges Venedig zurückkaufen (Umwelt > Freiheit)",
+    "reflection": "Wenn das Überleben einer Stadt von einer Tourismusform abhängt, die sie zerstört, sollte man zuerst die Stadt retten oder zuerst die Arbeitsplätze?",
+    "impact_score": 8.5,
+    "controversy_level": 7.5
   }
 ]
